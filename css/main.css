@@ -1,0 +1,125 @@
+body{
+	background-color:white;
+	margin:0px auto;
+	font-size:16px;
+}
+
+A{
+	text-decoration:none;
+}
+
+/*header*/
+#header{
+	width:100%;
+}
+
+#header HR{
+	border:solid 10px #526661;
+	margin:0px;
+}
+
+#logo{
+	width:840px;
+	margin:20px auto 0px;
+}
+
+/*navigator*/
+#navigator{
+	width:840px;
+	margin:10px auto 0px;
+}
+#navigator A{
+	display:inline-block;
+	line-height:35px;
+	font-family:Corbel;
+	font-size:12px;
+	font-weight:900;
+	color:black;
+	padding:0px 10px 0px 10px;
+}
+#navigator A:hover{
+	color:white;
+}
+#navigator .illustration:hover{
+	background-color: #61caba;
+}
+#navigator .painting:hover{
+	background-color: #fd6649;
+}	
+#navigator .sketch:hover{
+	background-color: #acacac;
+}
+#navigator .serial:hover{
+	background-color: #e4714c;
+}
+#navigator .contact:hover{
+	background-color: #c4ad89;
+}
+
+/*slider*/
+#sliderBorder{
+	background-image:url("../img/gradual-grey-bg.png");
+	background-repeat:repeat-x;
+	background-position: center top;
+	padding-top:20px;
+}
+
+.rslides_container {
+  margin: 0px auto;
+  width: 820px;
+}
+
+/*footer*/
+#footerBorder{
+	background-image:url("../img/gradual-grey-bg.png");
+	background-repeat:repeat-x;
+	background-position: center top;
+	margin-top:40px;
+	padding-top:50px;
+}
+
+#footer{
+	margin: 0px auto 50px;
+	width:840px;
+	height:120px;
+	font-family:Helvetica;
+}
+
+#footer .contact{
+	float:left;
+	height:100%;
+	width:380px;
+}
+
+#footer .logo{
+}
+
+#footer .mail{
+	margin-left:5px;
+}
+
+#footer .post{
+	float:left;
+	height:100%;
+	width:300px;
+}
+
+#footer .post H1{
+	font-size:16px;
+	font-weight:bold;
+	margin-top:0px;
+}
+
+#footer .post P{
+	margin:0px;
+}
+
+#footer .copyright{
+	height:100%;
+}
+#footer .copyright H1{
+	font-size:16px;
+}#footer .copyright H2{
+	font-size:12px;
+}
+
