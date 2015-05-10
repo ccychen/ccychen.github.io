@@ -1,7 +1,11 @@
+html{
+	-webkit-text-size-adjust:none;
+}
 body{
 	background-color:white;
 	margin:0px auto;
 	font-size:16px;
+
 }
 
 A{
@@ -71,10 +75,10 @@ A{
 
 /*footer*/
 #footerBorder{
-	background-image:url("../img/gradual-grey-bg.png");
+	background-image:url("../img/gradual-gold-bg.png");
 	background-repeat:repeat-x;
 	background-position: center top;
-	margin-top:40px;
+	margin-top:25px;
 	padding-top:50px;
 }
 
@@ -92,10 +96,14 @@ A{
 }
 
 #footer .logo{
+	width:110px;
 }
 
 #footer .mail{
 	margin-left:5px;
+	font-size: 11px;
+	font-weight:bold;
+	vertical-align:top;
 }
 
 #footer .post{
@@ -104,22 +112,28 @@ A{
 	width:300px;
 }
 
-#footer .post H1{
-	font-size:16px;
+#footer .recentPost{
+	display:inline-block;
+	font-size:11px;
 	font-weight:bold;
 	margin-top:0px;
+	margin-bottom:10px;
 }
 
 #footer .post P{
 	margin:0px;
+	font-size:10px;
 }
 
 #footer .copyright{
 	height:100%;
+	width:auto;
 }
-#footer .copyright H1{
-	font-size:16px;
-}#footer .copyright H2{
-	font-size:12px;
+#footer .copyright_note{
+	display:inline-block;
+	font-size:11px;
+	font-weight:bold;
+}#footer .copyright P{
+	font-size:10px;
 }
 
