@@ -101,12 +101,12 @@ function Album(album, images, config){
 		target_row_height: 200,
 		margin: 12,	//for calculation, also define in css
 		rows_per_page: 4,
-		image_folder:"works\\sketch\\"
+		image_folder:"works/sketch/"
 	}
 	
 	var _images = images;
 	var imgLen = _images.length;
-	var _image_thumb_folder = _config["image_folder"] + "thumb\\";
+	var _image_thumb_folder = _config["image_folder"] + "thumb/";
 	var _tarRowWidth = _config["width"];
 	var _tarRowHeight = _config["target_row_height"];
 	var _margin = _config["margin"];
