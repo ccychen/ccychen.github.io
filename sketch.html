@@ -2,18 +2,29 @@
 	<HEAD>
 		<TITLE>CCY CHEN</TITLE>
 		<link rel="stylesheet" href="css/main.css"/>
-		<link rel="stylesheet" href="css/slider.css"/>
-		<script src="js/jquery-1.11.2.min.js"></script>
-		<script src="js/responsiveslides.min.js"></script>
+		<link rel="stylesheet" href="css/serial.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
 		<script language="javascript">
-		  $(function() {
-			$(".rslides").responsiveSlides({
-				pager: true,
-				speed: 1500,
-				timeout: 30000,
-				namespace: "centered-btns"
+			$(function() {
+				var _folder = "";
+				var jsUrl = _folder + "list.js";
+				
+				/*
+				$.getScript( jsUrl, function() {
+					//
+				});
+				*/
+				var FILE_LIST = ["0927.jpg","0929.jpg","10092802.jpg","100929.jpg","101013.jpg",
+								"101015.jpg","101021.jpg","101025.jpg","1011005.jpg","101103.jpg",
+								"101104.jpg","101108.jpg","101109.jpg","101110.jpg","101115ss.jpg",
+								"101117-18.jpg","101119.jpg","101123.jpg","101203.jpg","110125.jpg",
+								"120207.jpg","120220.jpg","121030.jpg","121214-2.jpg","20110208.jpg",
+								"2011520.jpg","33.jpg","er.jpg"];
+				
+				var album = new Album($("#album"), FILE_LIST, null);
+				album.Render();
 			});
-		  });
 		</script>
 	</HEAD>
 	<BODY>
@@ -21,32 +32,26 @@
 		<DIV id="header">
 			<HR/>
 			<DIV id="logo">
-				<IMG src="img/LOGO.png">
+				<a href="index.html"><IMG src="img/LOGO.png"></a>
 			</DIV>
 		</DIV>
-		
+
 		<!-- navigator -->
 		<DIV id="navigator">
 			<a class="illustration" href="#">ILLUSTRATION</a>
 			<a class="painting" href="#">PAINTINGS</a>
-			<a class="sketch" href="sketch.html">SKETCH BOOK</a>
+			<div class="tab-sketch">SKETCH BOOK</div>
 			<a class="serial" href="serial.html">SERIAL</a>
 			<a class="contact" href="#">CONTACT</a>
-		</DIV>
-		
-		<!-- slider -->
+		</DIV>		
+	
+		<!-- list -->
 		<DIV id="content">
-			<HR class="grey"/>
-			<DIV class="rslides_container">
-				<ul class="rslides">
-				  <li><img src="slider/1.jpg" alt=""/></li>
-				  <li><img src="slider/2.jpg" alt=""/></li>
-				  <li><img src="slider/3.jpg" alt=""/></li>
-				</ul>
-			</DIV>
+			<hr class="grey"/>
+			<div id="album">
+			</div>
 		</DIV>
 		<div id="pager">
-			
 		</div>
 		<!-- foooter -->
 		<DIV id="footerBox" class="gradual-gold">

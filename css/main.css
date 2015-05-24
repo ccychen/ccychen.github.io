@@ -18,7 +18,8 @@ A{
 }
 
 #header HR{
-	border:solid 10px #212926;
+	height:15px;
+	background-color:#212926;
 	margin:0px;
 }
 
@@ -42,7 +43,8 @@ A{
 	padding:0px 10px 0px 10px;
 }
 #navigator A:hover{
-	color:white;
+	background-repeat: no-repeat;
+	background-position: center; 
 }
 #navigator .illustration:hover{
 	background-color: #61caba;
@@ -51,41 +53,84 @@ A{
 	background-color: #fd6649;
 }	
 #navigator .sketch:hover{
-	background-color: #acacac;
+	background-image: url("../img/nav-sketchbook.png");
 }
 #navigator .serial:hover{
-	background-color: #e4714c;
+	background-image: url("../img/nav-serial.png");
 }
 #navigator .contact:hover{
 	background-color: #c4ad89;
 }
 
-/*slider*/
-#sliderBorder{
-	background-image:url("../img/gradual-grey-bg.png");
-	background-repeat:repeat-x;
-	background-position: center top;
-	padding-top:20px;
+#navigator div{
+	display:inline-block;
+	line-height:35px;
+	font-family:Corbel;
+	font-size:12px;
+	font-weight:900;
+	color:black;
+	padding:0px 10px 0px 10px;
+	background-repeat: no-repeat;
+	background-position: center bottom; 
 }
 
-.rslides_container {
-  margin: 0px auto;
-  width: 820px;
+#navigator div.tab-serial{
+	background-image: url("../img/nav-serial.png");
+}
+
+#navigator div.tab-sketch{
+	background-image: url("../img/nav-sketchbook.png");
+}
+
+
+/* pageer */
+#pager{
+	height:25px;
+	width:100%;
+	margin:0px;
+	background-color: #e1ddda;
+	border-top:solid 1px #acacac;
+	border-bottom:solid 1px #acacac;
+}
+
+#pager div{
+	margin:0px auto;
+	width:840px;
+	text-align:right;
+}
+
+#pager span{
+	margin-left:5px;
+	line-height:25px;
+	font-family:Arial;
+	font-size:11px;
+	cursor: pointer;
+}
+
+#pager span.selected{
+	color:#cf6744;
+	cursor: default;
 }
 
 /*footer*/
-#footerBorder{
-	background-image:url("../img/gradual-gold-bg.png");
+#footerBox{
 	background-repeat:repeat-x;
 	background-position: center top;
-	margin-top:25px;
 	padding-top:50px;
+}
+
+#footerBox.gradual-gold{
+	background-image:url("../img/gradual-gold-bg.png");
+}
+
+#footerBox.gradual-orange{
+	background-image:url("../img/gradual-orange-bg.png");
 }
 
 #footer{
 	margin: 0px auto 50px;
 	width:840px;
-	height:120px;
+	height:180px;
 	font-family:Helvetica;
 }
 
@@ -137,3 +182,87 @@ A{
 	font-size:10px;
 }
 
+/*content*/
+#content{
+	background-image:url("../img/gradual-grey-bg.png");
+	background-repeat:repeat-x;
+	background-position: center top;
+}
+
+#content  HR{
+	height:1px;
+	margin:0px;
+	border:0px;
+}
+#content  HR.grey{
+	background-color:#acacac;
+}
+#content  HR.orange{
+	background-color:#cf6744;
+}
+
+/*slider*/
+.rslides_container {
+  margin: 20px auto;
+  width: 820px;
+}
+
+/* serial folder */
+.SerialBox{
+	width:840px;
+	height:560px;
+	margin: 20px auto;
+}
+
+.SerialBox .row{
+	height:260px;
+	margin-bottom:40px;
+}
+
+.SerialBox .cell{
+	width:245px;
+	height:100%;
+	border:solid 1px #acacac;
+	float:left;
+	margin:0px 10px 0px 10px;
+	cursor: pointer;
+}
+
+
+.SerialBox .cell .thumb{
+	width:100%;
+	height:200px;
+	border-bottom:solid 1px #acacac;
+}
+
+.SerialBox .cell .caption{
+	width:100%;
+	height:60px;
+	border:none;
+	padding-top:10px;
+	padding-left:10px;
+	font-family: Corbel;
+	font-weight: bold;
+	font-size:12px;
+	
+}
+
+/* album */
+#album{
+	margin: 20px auto;
+}
+
+#album .row{
+	width:100%;
+	padding:0px;
+	margin-top: 15px;
+}
+
+#album  img{
+	height:100%;
+	width:auto;
+}
+
+#album  img:nth-child(n+1){
+	margin-left:12px;
+}
