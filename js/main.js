@@ -81,7 +81,7 @@ function GridView(gv, cfg, data){
 			
 			row.Add(_data[i][0],	//folder 
 					_data[i][1],  	//caption
-					SERIAL_FOLDER + _data[i][0] + "\\thumb.jpg"); //thumb folder is defined in file serials.list 
+					SERIAL_FOLDER + _data[i][0] + "/thumb.jpg"); //thumb folder is defined in file serials.list 
 		}
 		
 		if(row){
