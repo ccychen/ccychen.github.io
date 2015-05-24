@@ -27,7 +27,7 @@ function GridView(gv, cfg, data){
 		$row.addClass("row");
 		_gv.append($row);
 		
-		this.add = function(f, c, tUrl){
+		this.Add = function(f, c, tUrl){
 			var $cell = $("<div/>");
 			$cell.addClass(_cssClass);
 			$cell.addClass("cell");
@@ -79,7 +79,7 @@ function GridView(gv, cfg, data){
 				row = new Row();
 			}
 			
-			row.add(_data[i][0],	//folder 
+			row.Add(_data[i][0],	//folder 
 					_data[i][1],  	//caption
 					SERIAL_FOLDER + _data[i][0] + "\\thumb.jpg"); //thumb folder is defined in file serials.list 
 		}
@@ -98,55 +98,113 @@ function GridView(gv, cfg, data){
 function Album(album, images, config){
 	var _config = {
 		width: 840,
-		target_row_height: 300,
+		target_row_height: 200,
 		margin: 12,	//for calculation, also define in css
-		rows_per_page: 3,
+		rows_per_page: 4,
 		image_folder:"works\\sketch\\"
 	}
-	var _imageFileNames = images;
-	var _image_thumb_folder = _config["image_folder"] + "thumb\\thumb_";
+	
+	var _images = images;
+	var imgLen = _images.length;
+	var _image_thumb_folder = _config["image_folder"] + "thumb\\";
 	var _tarRowWidth = _config["width"];
 	var _tarRowHeight = _config["target_row_height"];
 	var _margin = _config["margin"];
+	
+	var _rows = [];
+	var _rowPerPage = _config["rows_per_page"];
 	var _$album = album;
-	
-	//init
+
 	_$album.width(_tarRowWidth);
+	InitRowList();
 	
-	this.Render = function(){
-		var len = _imageFileNames.length;
-		var $row = $("<div/>");
-		var rowWidth = 0;
-		var numRowImgs = 0;
+	//calculate pages
+	var _numRows = _rows.length;
+	var _numPages = Math.ceil(_numRows / _rowPerPage);
+	
+	//
+	function Row(tarWidth, tarHeight, margin){
+		var _images = [];
+		var _tarHeight = tarHeight;
+		var _tarWidth = tarWidth;
+		var _margin = margin;
+		var _width = 0;
+		var _numImgs = 0;
 		
-		for(var i=0; i<len; i++){
-			var $img = $("<img/>").attr("src", _image_thumb_folder + _imageFileNames[i])
-			.load(function(){	
-				var nextWidth = Math.ceil(this.width / (this.height / _tarRowHeight));
-		
-				if((rowWidth + nextWidth + _margin * numRowImgs < _tarRowWidth) || //the next image is narrow than space
-				   (_tarRowWidth - rowWidth - _margin * numRowImgs > (nextWidth + _margin)/2)){ //space > image width / 2
-					//append
-					$row.append($(this));
-					numRowImgs ++;
-					rowWidth += nextWidth;
-					
-				}else{
-					//display row
-					var ratio = (_tarRowWidth - _margin * numRowImgs) / rowWidth;
-					var rowHeight = Math.round(_tarRowHeight * ratio);
-					
-					//$row.children().height(rowHeight);
-					$row.height(rowHeight).addClass("row");
-					_$album.append($row);
-					
-					//new row
-					$row = $("<div/>");
-					rowWidth  = 0;
-					numRowImgs = 0;
-				}
-			});
+		this.Add = function(fileName, oriWidth, oriHeight){
+			var scaledWidth = Math.ceil(oriWidth / (oriHeight / _tarHeight));
+			if((_width + scaledWidth + _margin * _numImgs < _tarWidth) //the image is narrow than space
+				|| (_tarWidth - _width - _margin * _numImgs > (scaledWidth + _margin)/2)){ //space > image width / 2
+				//append
+				_images.push([fileName, oriWidth, oriHeight]);
+				_numImgs++;
+				_width += scaledWidth;
+				return true;
+			}else{
+				//full
+				return false;
+			}
 		}
+		
+		this.numbrOfImage = function(){
+			return _numImgs;
+		};
+		
+		this.height = function(){
+			var ratio = (_tarWidth - _margin * _numImgs) / _width;
+			return Math.round(_tarHeight * ratio);
+		}
+		
+		this.getImage = function(idx){
+			return _images[idx];
+		}
+	}
+	
+	function InitRowList(){
+		var row = new Row(_tarRowWidth, _tarRowHeight, _margin);
+		for(var i=0; i < imgLen; i++){
+			var width = _images[i][1];
+			var height = _images[i][2];
+			
+			if(!row.Add(_images[i][0], _images[i][1], _images[i][2])){
+				//new row;
+				_rows.push(row);
+				row = new Row(_tarRowWidth, _tarRowHeight, _margin);
+				
+			}
+		}
+	}
+
+	this.Render = function(page){
+
+		var startIdx = _rowPerPage * (page - 1);
+		var endIdx = startIdx + _rowPerPage;
+		endIdx = _numRows < endIdx? _numRows : endIdx;
+		console.log("row, page,start, end:",_numRows,page, startIdx, endIdx);
+		
+		//clear rows
+		_$album.empty();
+		
+		
+		for(var i = startIdx ; i < endIdx; i++){			
+			var r = _rows[i];
+			
+			var $row = $("<div/>");
+			$row.height(r.height()).addClass("row");
+			
+			
+			for(var j=0; j < r.numbrOfImage(); j++){
+				var $img = $("<img/>").attr("src", _image_thumb_folder + r.getImage(j)[0]);
+				
+				$row.append($img);
+			}
+			
+			_$album.append($row);
+		}
+	}
+	
+	this.NumbrOfPage = function(){
+		return _numPages;
 	}
 }
 

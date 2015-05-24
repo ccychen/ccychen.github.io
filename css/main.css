@@ -249,7 +249,7 @@ A{
 
 /* album */
 #album{
-	margin: 20px auto;
+	margin: 20px auto 30px;
 }
 
 #album .row{
@@ -264,5 +264,5 @@ A{
 }
 
 #album  img:nth-child(n+1){
-	margin-left:12px;
+	margin-left:11px;
 }
