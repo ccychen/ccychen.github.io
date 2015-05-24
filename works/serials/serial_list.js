@@ -1,4 +1,4 @@
-var SERIAL_FOLDER = "works\\serials\\";
+var SERIAL_FOLDER = "works/serials/";
 var SERIAL_LIST = [
 	
 	/*[folder name, caption, thumbnail url]*/
