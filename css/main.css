@@ -24,13 +24,13 @@ A{
 }
 
 #logo{
-	width:840px;
+	width:960px;
 	margin:20px auto 0px;
 }
 
 /*navigator*/
 #navigator{
-	width:840px;
+	width:960px;
 	margin:10px auto 0px;
 }
 #navigator A{
@@ -95,7 +95,7 @@ A{
 
 #pager div{
 	margin:0px auto;
-	width:840px;
+	width:960px;
 	text-align:right;
 }
 
@@ -129,7 +129,7 @@ A{
 
 #footer{
 	margin: 0px auto 50px;
-	width:840px;
+	width:960px;
 	height:180px;
 	font-family:Helvetica;
 }
@@ -154,7 +154,7 @@ A{
 #footer .post{
 	float:left;
 	height:100%;
-	width:300px;
+	width:400px;
 }
 
 #footer .recentPost{
@@ -204,12 +204,12 @@ A{
 /*slider*/
 .rslides_container {
   margin: 20px auto;
-  width: 820px;
+  width: 940px;
 }
 
 /* serial folder */
 .SerialBox{
-	width:840px;
+	width:960px;
 	height:560px;
 	margin: 20px auto;
 }
@@ -220,11 +220,11 @@ A{
 }
 
 .SerialBox .cell{
-	width:245px;
+	width:285px;
 	height:100%;
 	border:solid 1px #acacac;
 	float:left;
-	margin:0px 10px 0px 10px;
+	margin:0px 15px 0px 15px;
 	cursor: pointer;
 }
 
@@ -233,6 +233,7 @@ A{
 	width:100%;
 	height:200px;
 	border-bottom:solid 1px #acacac;
+	text-align:center;
 }
 
 .SerialBox .cell .caption{

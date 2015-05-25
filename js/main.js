@@ -97,8 +97,8 @@ function GridView(gv, cfg, data){
 //Album
 function Album(album, images, config){
 	var _config = {
-		width: 840,
-		target_row_height: 200,
+		width: 960,
+		target_row_height: 240,
 		margin: 12,	//for calculation, also define in css
 		rows_per_page: 4,
 		image_folder:"works/sketch/"
