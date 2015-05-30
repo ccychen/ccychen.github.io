@@ -5,7 +5,6 @@ body{
 	background-color:white;
 	margin:0px auto;
 	font-size:16px;
-
 }
 
 A{
@@ -18,6 +17,7 @@ A{
 }
 
 #header HR{
+	width:100%;
 	height:15px;
 	background-color:#212926;
 	margin:0px;
@@ -249,21 +249,60 @@ A{
 }
 
 /* album */
-#album{
+.album{
 	margin: 20px auto 30px;
 }
 
-#album .row{
+.album .row{
 	width:100%;
 	padding:0px;
 	margin-top: 15px;
 }
 
-#album  img{
+.album  img{
 	height:100%;
 	width:auto;
 }
 
-#album  img:nth-child(n+1){
+.album  img:nth-child(n+1){
 	margin-left:11px;
 }
+
+/* big image */
+#bigImageBox{
+	width:960px;
+	height:600px;
+	margin: 20px auto;
+}
+
+#bigImageBox .thumbBox{
+	width:135px;
+	float:left;
+}
+
+#bigImageBox .thumbBox .cell{
+	width:30px;
+	height:40px;
+	background-color:gray;
+	float:left;
+	margin-bottom:5px;
+	margin-left:5px;
+}
+
+#bigImageBox .thumbBox .cell:nth-child(4n+1){
+	margin:0px 0px 0px 0px;
+}
+
+#bigImageBox .bigImage{
+	margin-left:10px;
+	width:810px;
+	float:left;
+}
+
+#bigImageBox .bigImage img{
+	width:100%;
+}
+
+
+
+
