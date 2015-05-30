@@ -7,14 +7,12 @@
 		<script type="text/javascript" src="js/main.js"></script>
 		<script language="javascript">
 			$(function() {
-				var _folder = "";
+				var _folder = "http://ccychen.github.io/works/sketch/";
 				var jsUrl = _folder + "list.js";
-				
-				/*
 				$.getScript( jsUrl, function() {
 					//
 				});
-				*/
+				/*
 				var FILE_LIST = [
 					["0927.jpg",375,300],
 					["0929.jpg",600,300],
@@ -45,8 +43,8 @@
 					["33.jpg",300,483],
 					["er.jpg",450,300]
 				];
-				
-				var _album = new Album($("#album"), FILE_LIST, null);
+				*/
+				var _album = new Album($(".album"), FILE_LIST, null);
 				_album.Render(1);
 				
 				var _pager = new Pager($("#pager"), _album.NumbrOfPage(), _album.Render);
@@ -74,7 +72,7 @@
 		<!-- list -->
 		<DIV id="content">
 			<hr class="grey"/>
-			<div id="album">
+			<div class="album">
 			</div>
 		</DIV>
 		
