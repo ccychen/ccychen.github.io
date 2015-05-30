@@ -42,10 +42,10 @@ file_object = open('list.js', 'w')
 file_object.write("var FILE_LIST = [\n")
 
 isFirst = 1
-files = [f for f in os.listdir(".\\thumb")]
+files = [f for f in os.listdir("./thumb")]
 for f in files:
     fName = f.lower()
-    fPath = ".\\thumb\\" + fName
+    fPath = "./thumb/" + fName
     if os.path.isfile(fPath) and (f.endswith('jpg') or f.endswith('jpeg') or f.endswith('png')):
         if isFirst != 1:
             file_object.write(",\n")
