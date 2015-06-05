@@ -1,69 +1,72 @@
-<HTML>
-	<HEAD>
-		<TITLE>CCY CHEN</TITLE>
-		<link rel="stylesheet" href="css/main.css"/>
-		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="works/serials/serial_list.js"></script>
-		<script language="javascript">
-			$(function() {
-				var _gv = new GridView($(".SerialBox"), null, SERIAL_LIST);	//list is defined in file serials.list 
-				_gv.Render(1);
-				
-				var _pager = new Pager($("#pager"), _gv.NumbrOfPage(), _gv.Render);
-				
-			});
-		</script>
-	</HEAD>
-	<BODY>
-		<!-- header -->
-		<DIV id="header">
-			<HR/>
-			<DIV id="logo">
-				<a href="index.html"><IMG src="img/LOGO.png"></a>
-			</DIV>
-		</DIV>
-		
-		<!-- navigator -->
-		<DIV id="navigator">
-			<a class="illustration" href="#">ILLUSTRATION</a>
-			<a class="painting" href="#">PAINTINGS</a>
-			<a class="sketch" href="sketch.html">SKETCH BOOK</a>
-			<div class="tab-serial">SERIAL</div>
-			<a class="contact" href="#">CONTACT</a>
-		</DIV>
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>CCY CHEN</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script type="text/javascript" src="works/serials/serial_list.js"></script>
+    <script language="javascript">
+        $(function () {
+            var _gv = new GridView($(".SerialBox"), null, SERIAL_LIST);	//list is defined in file serials.list 
+            _gv.Render(1);
 
-			
-		<!-- serial folders -->
-		<DIV id="content">
-			<hr class="orange"/>
-			<div class="SerialBox">
-			</div>
-		</DIV>
-		
-		<!-- Pager -->
-		<div id="pager">
-		</div>
-		
-		<!-- foooter -->
-		<DIV id="footerBox" class="gradual-orange">
-			<DIV id="footer">
-				<DIV class="contact">
-					<IMG class="logo" SRC="img/logo-footer.png"/><P/>
-					<IMG SRC="img/mail.png"/><span class="mail">ccyb166er@gmail.com</span>
-				</DIV>
-				<DIV class="post">
-					<span class="recentPost">RECENT POST</span>
-					<P>sketck book 22</P>
-					<P>food</P>
-					<P>chinese painting</P>
-					<P>prosseing</P>
-				</DIV>
-				<DIV class="copyright">
-					<span class="copyright_note">ALL WORKS &copy; CCY 2015</span>
-					<P>please do not reproduce without the expressed written consent of CCY</p>
-				</DIV>
-			</DIV>
-		</DIV>
-	</BODY>
-</HTML>
+            var _pager = new Pager($("#pager"), _gv.NumbrOfPage(), _gv.Render);
+        });
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <hr id="topBar" />
+    <div id="mainLogo" class="pagePadding">
+        <a href="index.html"><img src="img/LOGO.png"></a>
+    </div>
+
+    <!-- navigator -->
+    <div id="navigator" class="pagePadding">
+        <a class="illustration" href="#">ILLUSTRATION</a>
+        <a class="painting" href="#">PAINTINGS</a>
+        <a class="sketch" href="sketch.html">SKETCH BOOK</a>
+        <a class="tab-serial" href="#">SERIAL</a>
+        <a class="contact" href="#">CONTACT</a>
+    </div>
+
+    <hr class="line orange" />
+
+    <!-- sketch -->
+    <div id="content" class="pagePadding">
+        <div class="SerialBox">
+        </div>
+    </div>
+
+    <!-- pager -->
+    <div id="pager" class="pagePadding">
+
+    </div>
+
+    <!-- foooter -->
+    <div id="footerBox" class="gradual-orange">
+        <table id="footer">
+            <tr>
+                <td class="contact">
+                    <img class="logo" src="img/logo-footer.png" />
+                    <div class="mail"><img src="img/mail.png" /><span>ccyb166er@gmail.com</span></div>
+                </td>
+                <td class="post">
+                    <span class="recentPost">RECENT POST</span>
+                    <p>sketck book 22</p>
+                    <p>food</p>
+                    <p>chinese painting</p>
+                    <p>prosseing</p>
+                </td>
+                <td class="copyright">
+                    <span class="copyright_note">ALL WORKS &copy; CCY 2015</span>
+                    <p>please do not reproduce without the expressed written consent of CCY</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
