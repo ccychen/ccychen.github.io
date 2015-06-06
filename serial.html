@@ -5,15 +5,71 @@
     <title>CCY CHEN</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+        /* serial folder */
+        .SerialBox{
+            min-width:640px;
+            margin:0px auto;
+        }
+
+        .SerialBox .row{
+            margin-top: 10px;
+            display:flex;
+            justify-content:center;
+        }
+
+        .SerialBox .row .cell{
+            flex:1 0 auto;
+	        min-width:260px;
+            max-width:300px;
+	        border:solid 1px #acacac;
+	        cursor: pointer;
+        }
+
+        .SerialBox .row .fake_cell{
+            flex:1 0 auto;
+	        min-width:260px;
+            max-width:300px;
+            margin-left:10px;
+        }
+
+        .SerialBox .row .cell:nth-child(n+2){
+	        margin-left:10px;
+        }
+
+        .SerialBox .row .cell .thumb{
+	        width:100%;
+	        height:200px;
+	        border-bottom:solid 1px #acacac;
+	        text-align:center;
+        }
+
+        .SerialBox .row .cell .caption{
+	        width:100%;
+	        height:60px;
+	        border:none;
+	        padding-top:10px;
+	        padding-left:10px;
+	        font-family: Corbel;
+	        font-weight: bold;
+	        font-size:1.1em;
+        }
+    </style>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/serial.js"></script>
     <script type="text/javascript" src="works/serials/serial_list.js"></script>
     <script language="javascript">
-        $(function () {
-            var _gv = new GridView($(".SerialBox"), null, SERIAL_LIST);	//list is defined in file serials.list 
-            _gv.Render(1);
+        var _sb;
+        var _pager;
+        $(document).ready(function () {
+            _sb = new SerialBox($(".SerialBox"), SERIAL_LIST, {  "width": $("#navigator").width(), "rows_per_page": 3});
+            _pager = new Pager($("#pager"), _sb.NumbrOfPage(), _gv.Show);
+        });
 
-            var _pager = new Pager($("#pager"), _gv.NumbrOfPage(), _gv.Render);
+        $(window).resize(function () {
+            _sb.Resize($("#navigator").width());
+            _pager = new Pager($("#pager"), _sb.NumbrOfPage(), _sb.Show);
         });
     </script>
 </head>

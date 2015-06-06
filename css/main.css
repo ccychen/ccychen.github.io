@@ -14,8 +14,8 @@ A{
 }
 
 .pagePadding{
-    padding-left:3%;
-    padding-right:3%;
+    padding-left:30px;
+    padding-right:30px;
 }
 
 /* header */
@@ -232,118 +232,6 @@ hr.line.orange{
 	cursor: default;
 }
 
-/* slider */
-#slider{
-    position:relative;
-    max-width:960px;
-    margin:0px auto;
-}
-
-#slider IMG.image{
-    width:100%;
-}
-
-#slider IMG.image:first-child{
-    position:relative;
-    display:block;
-    z-index:599;
-}
-
-#slider IMG.image:nth-child(n+2){
-    display:none;
-    position:absolute;
-    left:0;
-    top:0;
-    z-index:597;
-}
-
-#slider IMG.image:nth-child(2){
-    display:block;
-    z-index:598;
-    opacity:1.0;
-}
-
-#slider .dots{
-    margin: 15px auto;
-    text-align:center;
-}
-
-#slider DIV.dot{
-    border: 0px;
-    display:inline-block;
-    border: 0px;
-    width: 6px;
-    height: 6px;
-    background-repeat:no-repeat;
-}
-
-#slider DIV.dot:nth-child(n+2){
-    margin-left: 20px;
-}
-
-#slider DIV.normal{
-    cursor:pointer;
-    background-image:url("../img/dot-grey.png");
-}
-
-#slider DIV.current{
-   cursor:default;
-   background-image:url("../img/dot-gold.png");
-}
-
-/* album */
-.album{
-    min-width:640px;
-}
-
-.album .row{
-	width:100%;
-	padding:0px;
-	margin-top: 15px;
-}
-
-.album  img{
-	height:100%;
-	width:auto;
-}
-
-.album  img:nth-child(n+1){
-	margin-left:11px;
-}
-
-/* serial folder */
-.SerialBox{
-}
-
-.SerialBox .row{
-	height:260px;
-	margin-bottom:40px;
-}
-
-.SerialBox .cell{
-	width:285px;
-	height:100%;
-	border:solid 1px #acacac;
-	float:left;
-	margin:0px 15px 0px 15px;
-	cursor: pointer;
-}
 
 
-.SerialBox .cell .thumb{
-	width:100%;
-	height:200px;
-	border-bottom:solid 1px #acacac;
-	text-align:center;
-}
 
-.SerialBox .cell .caption{
-	width:100%;
-	height:60px;
-	border:none;
-	padding-top:10px;
-	padding-left:10px;
-	font-family: Corbel;
-	font-weight: bold;
-	font-size:1.1em;
-}

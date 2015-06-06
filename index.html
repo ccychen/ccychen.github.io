@@ -5,8 +5,69 @@
     <title>CCY CHEN</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+        /* slider */
+        #slider{
+        position:relative;
+        max-width:960px;
+        margin:0px auto;
+        }
+
+        #slider IMG.image{
+        width:100%;
+        }
+
+        #slider IMG.image:first-child{
+        position:relative;
+        display:block;
+        z-index:599;
+        }
+
+        #slider IMG.image:nth-child(n+2){
+        display:none;
+        position:absolute;
+        left:0;
+        top:0;
+        z-index:597;
+        }
+
+        #slider IMG.image:nth-child(2){
+        display:block;
+        z-index:598;
+        opacity:1.0;
+        }
+
+        #slider .dots{
+        margin: 15px auto;
+        text-align:center;
+        }
+
+        #slider DIV.dot{
+        border: 0px;
+        display:inline-block;
+        border: 0px;
+        width: 6px;
+        height: 6px;
+        background-repeat:no-repeat;
+        }
+
+        #slider DIV.dot:nth-child(n+2){
+        margin-left: 20px;
+        }
+
+        #slider DIV.normal{
+        cursor:pointer;
+        background-image:url("../img/dot-grey.png");
+        }
+
+        #slider DIV.current{
+        cursor:default;
+        background-image:url("../img/dot-gold.png");
+        }
+    </style>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/slider.js"></script>
     <script language="javascript">
         $(function () {
             var _slider = new Slider($("#slider"), {

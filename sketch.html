@@ -5,12 +5,34 @@
     <title>CCY CHEN</title>
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
+    <style>
+        /* album */
+        .album{
+            min-width:640px;
+        }
+
+        .album .row{
+	        width:100%;
+	        padding:0px;
+	        margin-top: 15px;
+        }
+
+        .album  img{
+	        height:100%;
+	        width:auto;
+        }
+
+        .album  img:nth-child(n+1){
+	        margin-left:11px;
+        }
+    </style>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/sketch.js"></script>
     <script language="javascript">
         var _album;
         var _pager;
-        $(function () {
+        $(document).ready(function () {
             var _folder = "http://ccychen.github.io/works/sketch/";
             /*
             var jsUrl = _folder + "list.js";
@@ -55,6 +77,7 @@
             _album.Resize($("#navigator").width());
             _pager = new Pager($("#pager"), _album.NumbrOfPage(), _album.Show);
         });
+
     </script>
 </head>
 <body>

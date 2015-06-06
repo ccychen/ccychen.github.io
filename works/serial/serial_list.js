@@ -7,6 +7,7 @@ var SERIAL_LIST = [
 	["1", "CAPTION A"],
 	["2", "CAPTION B"],
 	["3", "CAPTION C"],
+	["A", "CAPTION D"],
 	["4", "CAPTION E"],
 	["5", "CAPTION F"],
 	["6", "CAPTION G"],
@@ -17,7 +18,6 @@ var SERIAL_LIST = [
 	["11", "CAPTION L"],
 	["12", "CAPTION M"],
 	["13", "CAPTION N"],
-	["14", "CAPTION O"]
 	
 	//list end
 ];
