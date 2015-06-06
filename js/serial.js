@@ -10,7 +10,7 @@ function SerialBox(sb, folders, config) {
         "margin": 10,
         "rows_per_page": 2,
         "css_class": "SerialBox",
-        "path": "works/serials/"
+        "path": "works/serial/cover/"
     };
 
     for (key in config) {
@@ -58,7 +58,7 @@ function SerialBox(sb, folders, config) {
                 _rows.push(row);
                 row = new Row(_config["width"], _config["folder_width"], _config["margin"]);
             }
-            row.Add(_folders[i][0], _folders[i][1], _config["path"] + _folders[i][0] + "/thumb.jpg")
+            row.Add(_folders[i][0], _folders[i][1], _config["path"] + _folders[i][0] + ".jpg")
         }
 
         if (row.NumbrOfFolder()) {
