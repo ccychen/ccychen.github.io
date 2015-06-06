@@ -8,6 +8,7 @@
     <style>
         /* detail */
         #detailBox{
+            display:table;
         }
 
         #thumbBox{
@@ -16,7 +17,12 @@
             float:left;
         }
 
-        #thumbBox .cell{
+        #thumbBox .thumbs{
+            display:table;
+            height:150px;
+        }
+
+        #thumbBox .thumbs .cell{
 	        width:30px;
 	        height:40px;
 	        float:left;
@@ -26,15 +32,36 @@
             -webkit-filter: grayscale(1); 
         }
 
-        #thumbBox .cell:hover{
+        #thumbBox .thumbs .cell:hover{
             filter: none;
             -webkit-filter: none; 
             cursor: pointer;
         }
 
-        #thumbBox .cell:nth-child(4n+1){
+        #thumbBox .thumbs .cell:nth-child(4n+1){
 	        margin:0px 0px 0px 0px;
         }
+
+        #thumbBox .pager .arrow{
+            border:0px;
+            width:15px;
+            height:15px;
+            background-image:url("img/arrow.png");
+        }
+        #thumbBox .pager .arrow.left{
+           float:left;
+           background-position:0px 0px;
+        }
+        #thumbBox .pager .arrow.right{
+           float:right;
+           background-position:15px 0px;
+        }
+        #thumbBox .pager .arrow:hover{
+           background-position-y:15px;
+           cursor:pointer;
+        }
+
+
         #imageBox{
             float:left;
 	        margin-left:60px;
@@ -80,7 +107,7 @@
                 var bodyWidth = $(window).width() > $_imgDetail.width() + EXTRA_WIDH ? $(window).width() : $_imgDetail.width() + EXTRA_WIDH;
                 $("body").width(bodyWidth);
 
-                $("#detailBox").height($_imgDetail.height() + EXTRA_HIGHT);
+                //$("#detailBox").height($_imgDetail.height() + EXTRA_HIGHT);
 
                 $("#caption").text(caption);
             });
@@ -146,10 +173,16 @@
     <div id="content" class="pagePadding">
         <div id="detailBox">
             <div id="thumbBox">
+                <div class="thumbs">
+
+                </div>
+                <div class="pager">
+
+                </div>
             </div>
             <div id="imageBox">
                 <img id="imageDetail" />
-                <span id="caption">caption</span>
+                <span id="caption"></span>
             </div>
         </div>
     </div>

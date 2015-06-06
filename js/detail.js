@@ -2,9 +2,11 @@
 function ThumbBox(tBox, images, config, changeImageEvent) {
     //configuration
     var _tBox = tBox;
+    var _thumbs = tBox.children(".thumbs");
+    var _pager = tBox.children(".pager");
     var _images = images;
     var _config = {
-        "images_per_page": 20,
+        "images_per_page": 12,
         "folder": "",
     };
 
@@ -32,14 +34,32 @@ function ThumbBox(tBox, images, config, changeImageEvent) {
         endIdx = _images.length - 1 < endIdx ? _images.length - 1 : endIdx;
 
         //clear rows
-        _tBox.empty();
+        _thumbs.empty();
+
         for (var i = startIdx; i <= endIdx; i++) {
             var $img = $("<IMG/>").addClass("cell").attr("src", _config["folder"] + _images[i][0])
             $img.click({ id: _images[i][0] }, function (e) {
                 changeImageEvent(e.data.id);
             });
 
-            _tBox.append($img);
+            _thumbs.append($img);
+        }
+
+        //left pager
+        _pager.empty();
+        if (page > 1) {
+            var $left = $("<DIV/>").addClass("arrow left").click(function () {
+                Render(page - 1);
+            });
+            _pager.append($left);
+
+        }
+
+        if (page < _numPages) {
+            var $right = $("<DIV/>").addClass("arrow right").click(function () {
+                Render(page + 1);
+            });
+            _pager.append($right);
         }
     }
 
@@ -50,4 +70,35 @@ function ThumbBox(tBox, images, config, changeImageEvent) {
     this.Show = function (page) {
         Render(page);
     }
+}
+
+//pager
+function Pager1(pager, numPage, changePageEvent) {
+    var _pager = pager;
+    var _currPage = 1;
+
+    function Render() {
+        //var $pagerBox = $("<div/>");
+        _pager.empty();
+        if (numPage == 1) {
+            return;
+        }
+        //_pager.append($pagerBox);
+        for (var i = 1; i <= numPage; i++) {
+            var $page = $("<span/>");
+            $page.text(i);
+            if (i == _currPage) {
+                $page.addClass("selected");
+            } else {
+                $page.click({ page: i }, function (e) {
+                    _currPage = e.data.page;
+                    Render();
+                    changePageEvent(_currPage);
+                });
+            }
+            _pager.append($page);
+        }
+    }
+
+    Render();
 }

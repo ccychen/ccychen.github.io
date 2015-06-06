@@ -62,7 +62,7 @@
 
         //move the next image to the second
         $nxt.insertAfter($curr);
-
+        $nxt.css({"display": "block"});
         //set dot controller
         var $dots = _$slider.children("DIV.dots");
 
@@ -84,7 +84,7 @@
             window.setTimeout(Render, _tranSpeed);
         } else {
             $frst.insertAfter(_$slider.children(".image:nth-child(2)"));
-            $frst.css("opacity", 1);
+            $frst.css({"opacity":1,"display":"none"});
             _isRendering = false;
             _timer = window.setTimeout(Show, _interval);
         }
