@@ -75,6 +75,12 @@ A{
     cursor:default;
 }
 
+#navigator .tab-illustration{
+	background-color: #61caba;
+    cursor:default;
+}
+
+
 /* line */
 hr.line{
 	height:1px;
