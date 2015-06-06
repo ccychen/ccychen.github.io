@@ -35,7 +35,7 @@
         var _pager;
 
         $(document).ready(function () {
-            _album = new Album($(".album"), FILE_LIST, { "width": $("#navigator").width() });
+            _album = new Album($(".album"), FILE_LIST, { "width": $("#navigator").width(), "rows_per_page": 10});
             _pager = new Pager($("#pager"), _album.NumbrOfPage(), _album.Show);
         });
 
@@ -62,7 +62,7 @@
         <a class="contact" href="#">CONTACT</a>
     </div>
 
-    <hr class="line grey" />
+    <hr class="line grey"/>
 
     <!-- sketch -->
     <div id="content" class="pagePadding">
@@ -76,7 +76,7 @@
     </div>
 
     <!-- foooter -->
-    <div id="footerBox" class="gradual-gold">
+    <div id="footerBox" class="gradual-grey">
         <table id="footer">
             <tr>
                 <td class="contact">

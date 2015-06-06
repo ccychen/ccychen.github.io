@@ -20,8 +20,8 @@ A{
 
 /* header */
 #topBar{
-	height:15px;
-    background-color:#212926;
+	height:10px;
+    background-color:#33423d;
 	margin:0px;
 }
 
@@ -43,18 +43,21 @@ A{
 	color:black;
 	padding:0px 10px 0px 10px;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: bottom;
 }
 
 #navigator .illustration:hover{
 	background-color: #61caba;
 }
+
 #navigator .painting:hover{
-	background-color: #fd6649;
-}	
+	background-image: url("../img/nav-painting.png");
+}
+
 #navigator .sketch:hover{
 	background-image: url("../img/nav-sketchbook.png");
 }
+
 #navigator .serial:hover{
 	background-image: url("../img/nav-serial.png");
 }
@@ -78,8 +81,11 @@ hr.line{
 	margin:0px;
 	border:0px;
 }
+hr.line.black{
+	background-color:black;
+}
 hr.line.grey{
-	background-color:#acacac;
+	background-color:#555555;
 }
 hr.line.orange{
 	background-color:#cf6744;
@@ -121,6 +127,10 @@ hr.line.orange{
 	background-position: center top;
 	padding-top:50px;
     height:180px;
+}
+
+#footerBox.gradual-grey{
+	background-image:url("../img/gradual-grey-bg.png");
 }
 
 #footerBox.gradual-gold{
@@ -199,7 +209,7 @@ hr.line.orange{
 
 /*content*/
 #content{
-	background-image:url("../img/gradual-grey-bg.png");
+	background-image:url("../img/content-bg.png");
 	background-repeat:repeat-x;
 	background-position: center top;
     padding-top:20px;

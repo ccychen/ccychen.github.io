@@ -9,7 +9,7 @@
         /* slider */
         #slider{
         position:relative;
-        max-width:960px;
+        max-width:960px;	/*设置首页图片的宽度*/
         margin:0px auto;
         }
 
@@ -72,8 +72,8 @@
         $(function () {
             var _slider = new Slider($("#slider"), {
                 "interval": 30,
-                "transitionSpeed":150,
-                "images":["slider/1.jpg", "slider/2.jpg", "slider/3.jpg"]})
+                "transitionSpeed":50,
+                "images":["slider/1.jpg", "slider/2.jpg", "slider/3.jpg"]}) //对应slider文件夹中的文件
 		});
     </script>
 </head>
