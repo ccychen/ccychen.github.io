@@ -141,6 +141,10 @@ hr.line.orange{
 	background-image:url("../img/gradual-orange-bg.png");
 }
 
+#footerBox.gradual-green{
+	background-image:url("../img/gradual-green-bg.png");
+}
+
 #footer{
     margin:0px auto;
 

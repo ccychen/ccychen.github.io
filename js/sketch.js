@@ -9,7 +9,8 @@ function Album(album, images, config) {
         "max_row_height": 260,
         "margin": 12,	//for calculation, also define in css
         "rows_per_page": 3,
-        "image_folder": "works/sketch/"
+        "image_folder": "works/sketch/",
+        "category":"sketch"
     }
 
     var _numOfPages = 1, _pageNum = 1;
@@ -87,7 +88,7 @@ function Album(album, images, config) {
             var $row = $("<div/>");
             $row.height(r.height()).addClass("row");
             for (var j = 0; j < r.numbrOfImage() ; j++) {
-                var $link = $("<A target='blank'/>").attr("href", "detail.html?cate=sketch&id=" + r.getImage(j)[0]);
+                var $link = $("<A target='blank'/>").attr("href", "detail.html?cate=" + _config["category"] + "&id=" + r.getImage(j)[0]);
                 var $img = $("<img/>").attr("src", _config["image_folder"] + "thumb/" + r.getImage(j)[0]);
                 $link.append($img);
                 $row.append($link);

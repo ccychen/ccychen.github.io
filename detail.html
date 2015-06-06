@@ -35,18 +35,28 @@
         #thumbBox .cell:nth-child(4n+1){
 	        margin:0px 0px 0px 0px;
         }
-
-        #imageDetail{
+        #imageBox{
             float:left;
 	        margin-left:60px;
             margin-bottom:20px;
+        }
+        #imageDetail{
+
+        }
+        #caption{
+            display:block;
+            height:60px;
+	        border:none;
+	        font-family: Corbel;
+	        font-size:1.6em;
         }
     </style>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/detail.js"></script>
     <script language="javascript">
-        var EXTRA_WIDH = 135+ 30*2 + 60; //thumbox + left/right margin + space between
+        var EXTRA_WIDH = 135 + 30 * 2 + 60; //thumbox + left/right margin + space between
+        var EXTRA_HIGHT = 20;
         var _cate = getParameterByName("cate");
         var _id, _folder, _dataUrl;
         var _tBox, _pager, $_imgDetail;
@@ -57,17 +67,34 @@
             _id = getParameterByName("id");
         } else if (_cate == "serial") {
             _folder = "works/serial/" + getParameterByName("id") + "/";
+        } else if (_cate == "illustration") {
+            _folder = "works/illustration/";
+            _id = getParameterByName("id");
         }
+
         _dataUrl = _folder + "list.js";
 
-        function ShowImage(id) {
+        function ShowImage(id, caption) {
+            
             $_imgDetail.attr("src", _folder + id).load(function () {
                 var bodyWidth = $(window).width() > $_imgDetail.width() + EXTRA_WIDH ? $(window).width() : $_imgDetail.width() + EXTRA_WIDH;
                 $("body").width(bodyWidth);
+
+                $("#detailBox").height($_imgDetail.height() + EXTRA_HIGHT);
+
+                $("#caption").text(caption);
             });
         }
 
         $(document).ready(function () {
+            if (_cate == "sketch") {
+                $("#footerBox").addClass("gradual-grey");
+            } else if (_cate == "serial") {
+                $("#footerBox").addClass("gradual-grey");
+            }else if (_cate == "illustration") {
+                $("#footerBox").addClass("gradual-grey");
+            }
+
             $.getScript(_dataUrl, function () {
                 //thumb
                 _tBox = new ThumbBox($("#thumbBox"), FILE_LIST, { "folder": _folder + "thumb/" }, ShowImage);
@@ -79,7 +106,20 @@
                 if (_cate == "serial") {
                     _id = FILE_LIST[0][0];
                 }
-                ShowImage(_id);
+                //search the caption
+                var caption = "";
+                var len = FILE_LIST.length;
+                for (var i = 0; i < len; i++) {
+                    
+                    if (FILE_LIST[i][0] == _id) {
+                        if (FILE_LIST[i].length >= 4) {
+                            caption = FILE_LIST[i][3];
+                            console.log(caption);
+                            break;
+                        }
+                    }
+                }
+                ShowImage(_id, caption);
             });
         });
     </script>
@@ -93,24 +133,48 @@
 
     <!-- navigator -->
     <div id="navigator" class="pagePadding">
-        <a class="illustration" href="#">ILLUSTRATION</a>
+        <a class="illustration" href="illustration.html">ILLUSTRATION</a>
         <a class="painting" href="#">PAINTINGS</a>
         <a class="sketch" href="sketch.html">SKETCH BOOK</a>
         <a class="serial" href="serial.html">SERIAL</a>
         <a class="contact" href="#">CONTACT</a>
     </div>
 
-    <hr class="line orange" />
+    <hr id="#navLine" class="line grey" />
 
     <!-- sketch -->
     <div id="content" class="pagePadding">
         <div id="detailBox">
             <div id="thumbBox">
             </div>
-            <IMG id="imageDetail"/>
+            <div id="imageBox">
+                <img id="imageDetail" />
+                <span id="caption">caption</span>
+            </div>
         </div>
     </div>
 
     <!-- foooter -->
+    <div id="footerBox">
+        <table id="footer">
+            <tr>
+                <td class="contact">
+                    <img class="logo" src="img/logo-footer.png" />
+                    <div class="mail"><img src="img/mail.png" /><span>ccyb166er@gmail.com</span></div>
+                </td>
+                <td class="post">
+                    <span class="recentPost">RECENT POST</span>
+                    <p>sketck book 22</p>
+                    <p>food</p>
+                    <p>chinese painting</p>
+                    <p>prosseing</p>
+                </td>
+                <td class="copyright">
+                    <span class="copyright_note">ALL WORKS &copy; CCY 2015</span>
+                    <p>please do not reproduce without the expressed written consent of CCY</p>
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
 </html>

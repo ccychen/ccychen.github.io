@@ -6,74 +6,47 @@
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/main.css" />
     <style>
-        /* serial folder */
-        .SerialBox{
-            min-width:640px;
-            margin:0px auto;
+        /* album */
+        .album {
+            min-width: 640px;
         }
 
-        .SerialBox .row{
-            margin-top: 10px;
-            display:flex;
-            display: -webkit-flex;
-            justify-content:center;
+        .album .row {
+            width: 100%;
+            padding: 0px;
+            margin-top: 15px;
         }
 
-        .SerialBox .row .cell{
-            flex:1 0 auto;
-            -webkit-flex:1 0 auto;
-	        min-width:260px;
-            max-width:300px;
-	        border:solid 1px #acacac;
-	        cursor: pointer;
+        .album img {
+            height: 100%;
+            width: auto;
         }
 
-        .SerialBox .row .fake_cell{
-            flex:1 0 auto;
-            -webkit-flex:1 0 auto;
-	        min-width:260px;
-            max-width:300px;
-            margin-left:10px;
-        }
-
-        .SerialBox .row .cell:nth-child(n+2){
-	        margin-left:10px;
-        }
-
-        .SerialBox .row .cell .thumb{
-	        width:100%;
-	        height:200px;
-	        border-bottom:solid 1px #acacac;
-	        text-align:center;
-        }
-
-        .SerialBox .row .cell .caption{
-	        width:100%;
-	        height:60px;
-	        border:none;
-	        padding-top:10px;
-	        padding-left:10px;
-	        font-family: Corbel;
-	        font-weight: bold;
-	        font-size:1.1em;
+        .album img:nth-child(n+1) {
+            margin-left: 11px;
         }
     </style>
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/serial.js"></script>
-    <script type="text/javascript" src="works/serial/serial_list.js"></script>
+    <script src="js/sketch.js"></script>
     <script language="javascript">
-        var _sb;
+        var _album;
         var _pager;
+
         $(document).ready(function () {
-            _sb = new SerialBox($(".SerialBox"), SERIAL_LIST, {  "width": $("#navigator").width(), "rows_per_page": 3});
-            _pager = new Pager($("#pager"), _sb.NumbrOfPage(), _gv.Show);
+            $.getScript("works/illustration/list.js", function () {
+                _album = new Album($(".album"), FILE_LIST,
+                    { "width": $("#navigator").width(), "rows_per_page": 10, "image_folder": "works/illustration/", "category": "illustration" });
+                _pager = new Pager($("#pager"), _album.NumbrOfPage(), _album.Show);
+
+            });
         });
 
         $(window).resize(function () {
-            _sb.Resize($("#navigator").width());
-            _pager = new Pager($("#pager"), _sb.NumbrOfPage(), _sb.Show);
+            _album.Resize($("#navigator").width());
+            _pager = new Pager($("#pager"), _album.NumbrOfPage(), _album.Show);
         });
+
     </script>
 </head>
 <body>
@@ -85,18 +58,18 @@
 
     <!-- navigator -->
     <div id="navigator" class="pagePadding">
-        <a class="illustration" href="illustration.html">ILLUSTRATION</a>
+        <a class="tab-illustration" href="#">ILLUSTRATION</a>
         <a class="painting" href="#">PAINTINGS</a>
         <a class="sketch" href="sketch.html">SKETCH BOOK</a>
-        <a class="tab-serial" href="#">SERIAL</a>
+        <a class="serial" href="serial.html">SERIAL</a>
         <a class="contact" href="#">CONTACT</a>
     </div>
 
-    <hr class="line orange" />
+    <hr class="line grey" />
 
     <!-- sketch -->
     <div id="content" class="pagePadding">
-        <div class="SerialBox">
+        <div class="album">
         </div>
     </div>
 
@@ -106,7 +79,7 @@
     </div>
 
     <!-- foooter -->
-    <div id="footerBox" class="gradual-orange">
+    <div id="footerBox" class="gradual-green">
         <table id="footer">
             <tr>
                 <td class="contact">
