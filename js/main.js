@@ -35,3 +35,15 @@ function getParameterByName(name) {
 		results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
+
+$(document).ready(function () {
+
+    var $paint = $("#navigator").children(".painting");
+    $paint.mouseover(function () {
+        $paint.html("COMEING SOON");
+    });
+
+    $paint.mouseout(function () {
+        $paint.html("PAINTING");
+    });
+});

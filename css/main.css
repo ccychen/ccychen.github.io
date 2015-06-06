@@ -51,7 +51,12 @@ A{
 }
 
 #navigator .painting:hover{
-	background-image: url("../img/nav-painting.png");
+    background-image: url("../img/nav-painting.png");
+    vertical-align:bottom;
+    line-height:17px;
+    text-align:center;
+    width:54px;
+    color:white;
 }
 
 #navigator .sketch:hover{
