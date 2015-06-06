@@ -88,7 +88,7 @@ function Album(album, images, config) {
             $row.height(r.height()).addClass("row");
             for (var j = 0; j < r.numbrOfImage() ; j++) {
                 var $link = $("<A target='blank'/>").attr("href", "detail.html?cate=sketch&id=" + r.getImage(j)[0]);
-                var $img = $("<img/>").attr("src", _config["image_folder"] + r.getImage(j)[0]);
+                var $img = $("<img/>").attr("src", _config["image_folder"] + "thumb/" + r.getImage(j)[0]);
                 $link.append($img);
                 $row.append($link);
             }
