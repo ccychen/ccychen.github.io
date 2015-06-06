@@ -49,52 +49,17 @@
     <script language="javascript">
         var EXTRA_WIDH = 135+ 30*2 + 10; //thumbox + left/right margin + space between
         var _cate = getParameterByName("cate");
-        var _id = null;
-        var _dataUrl = null;
-        var _folder = null;
-        var FILE_LIST = null;
+        var _id, _folder, _dataUrl;
+        var _tBox, _pager, $_imgDetail;
+
         if (_cate == "sketch") {
             //sketch book
             _folder = "works/sketch/";
             _id = getParameterByName("id");
-            FILE_LIST = [
-              ["0927.jpg", 375, 300],
-              ["0929.jpg", 600, 300],
-              ["10092802.jpg", 300, 375],
-              ["100929.jpg", 300, 375],
-              ["101013.jpg", 300, 450],
-              ["101015.jpg", 375, 300],
-              ["101021.jpg", 300, 375],
-              ["101025.jpg", 300, 375],
-              ["1011005.jpg", 300, 450],
-              ["101103.jpg", 300, 300],
-              ["101104.jpg", 300, 375],
-              ["101108.jpg", 300, 375],
-              ["101109.jpg", 300, 413],
-              ["101110.jpg", 300, 450],
-              ["101115ss.jpg", 300, 450],
-              ["101117-18.jpg", 450, 300],
-              ["101119.jpg", 300, 375],
-              ["101123.jpg", 300, 375],
-              ["101203.jpg", 300, 483],
-              ["110125.jpg", 375, 300],
-              ["120207.jpg", 375, 300],
-              ["120220.jpg", 300, 450],
-              ["121030.jpg", 300, 375],
-              ["121214-2.jpg", 300, 375],
-              ["2011520.jpg", 300, 375]];
         } else if (_cate == "serial") {
             _folder = "works/serial/" + getParameterByName("id") + "/";
-            FILE_LIST = [
-                ["101203.jpg", 30, 48],
-                ["110125.jpg", 30, 24],
-                ["120207.jpg", 30, 24],
-                ["120220.jpg", 30, 45]];
-            _id = FILE_LIST[0][0];
         }
         _dataUrl = _folder + "list.js";
-
-        var _tBox, _pager, $_imgDetail;
 
         function ShowImage(id) {
             $_imgDetail.attr("src", _folder + id).load(function () {
@@ -104,17 +69,20 @@
         }
 
         $(document).ready(function () {
-            //thumb
-            _tBox = new ThumbBox($("#thumbBox"), FILE_LIST, { "folder": _folder + "thumb/"}, ShowImage);
+            $.getScript(_dataUrl, function () {
+                //thumb
+                _tBox = new ThumbBox($("#thumbBox"), FILE_LIST, { "folder": _folder + "thumb/" }, ShowImage);
+                //_pager = new Pager($("#pager"), _sb.NumbrOfPage(), _gv.Show);
 
-            //_pager = new Pager($("#pager"), _sb.NumbrOfPage(), _gv.Show);
+                $_imgDetail = $("#imageDetail");
 
-            $_imgDetail = $("#imageDetail");
-
-            //detail
-            ShowImage(_id);
+                //detail
+                if (_cate == "serial") {
+                    _id = FILE_LIST[0][0];
+                }
+                ShowImage(_id);
+            });
         });
-
     </script>
 </head>
 <body>

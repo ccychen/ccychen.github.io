@@ -29,46 +29,12 @@
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/sketch.js"></script>
+    <script type="text/javascript" src="works/sketch/list.js"></script>
     <script language="javascript">
         var _album;
         var _pager;
+
         $(document).ready(function () {
-            var _folder = "http://ccychen.github.io/works/sketch/";
-            /*
-            var jsUrl = _folder + "list.js";
-            $.getScript( jsUrl, function() {
-                //
-            });
-            */
-
-            var FILE_LIST = [
-            ["0927.jpg", 375, 300],
-            ["0929.jpg", 600, 300],
-            ["10092802.jpg", 300, 375],
-            ["100929.jpg", 300, 375],
-            ["101013.jpg", 300, 450],
-            ["101015.jpg", 375, 300],
-            ["101021.jpg", 300, 375],
-            ["101025.jpg", 300, 375],
-            ["1011005.jpg", 300, 450],
-            ["101103.jpg", 300, 300],
-            ["101104.jpg", 300, 375],
-            ["101108.jpg", 300, 375],
-            ["101109.jpg", 300, 413],
-            ["101110.jpg", 300, 450],
-            ["101115ss.jpg", 300, 450],
-            ["101117-18.jpg", 450, 300],
-            ["101119.jpg", 300, 375],
-            ["101123.jpg", 300, 375],
-            ["101203.jpg", 300, 483],
-            ["110125.jpg", 375, 300],
-            ["120207.jpg", 375, 300],
-            ["120220.jpg", 300, 450],
-            ["121030.jpg", 300, 375],
-            ["121214-2.jpg", 300, 375],
-            ["2011520.jpg", 300, 375]
-            ];
-
             _album = new Album($(".album"), FILE_LIST, { "width": $("#navigator").width() });
             _pager = new Pager($("#pager"), _album.NumbrOfPage(), _album.Show);
         });
