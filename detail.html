@@ -114,17 +114,19 @@
         }
 
         $(document).ready(function () {
+            var cfg = { "folder": _folder + "thumb/"};
             if (_cate == "sketch") {
                 $("#footerBox").addClass("gradual-grey");
             } else if (_cate == "serial") {
                 $("#footerBox").addClass("gradual-grey");
+                cfg["filePrefix"] = ""; 
             }else if (_cate == "illustration") {
                 $("#footerBox").addClass("gradual-grey");
             }
 
             $.getScript(_dataUrl, function () {
                 //thumb
-                _tBox = new ThumbBox($("#thumbBox"), FILE_LIST, { "folder": _folder + "thumb/" }, ShowImage);
+                _tBox = new ThumbBox($("#thumbBox"), FILE_LIST, cfg, ShowImage);
                 //_pager = new Pager($("#pager"), _sb.NumbrOfPage(), _gv.Show);
 
                 $_imgDetail = $("#imageDetail");

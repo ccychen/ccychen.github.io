@@ -8,6 +8,7 @@ function ThumbBox(tBox, images, config, changeImageEvent) {
     var _config = {
         "images_per_page": 12,
         "folder": "",
+        "filePrefix":"micro_"
     };
 
     for (key in config) {
@@ -37,7 +38,7 @@ function ThumbBox(tBox, images, config, changeImageEvent) {
         _thumbs.empty();
 
         for (var i = startIdx; i <= endIdx; i++) {
-            var $img = $("<IMG/>").addClass("cell").attr("src", _config["folder"] + _images[i][0])
+            var $img = $("<IMG/>").addClass("cell").attr("src", _config["folder"] + _config["filePrefix"] + _images[i][0]);
             $img.click({ id: _images[i][0] }, function (e) {
                 changeImageEvent(e.data.id);
             });
