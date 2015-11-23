@@ -4,7 +4,7 @@ function Album(album, images, config) {
     var _images = images;
     var _rows = [];
     var _config = {
-        "width": 960,
+        "width": 1024,
         "target_row_height": 240,
         "max_row_height": 260,
         "margin": 12,	//for calculation, also define in css

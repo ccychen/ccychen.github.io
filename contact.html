@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>CCY CHEN</title>
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="css/main.css" />
+    <style>
+		#ContactBox{
+			min-width:350px;
+			width:1024px;
+			margin:0px auto;
+			height:400px;
+		}
+
+		#contact{
+			width:350px;
+			padding-left:100px;
+			padding-top:20px;
+			float:left;
+		}
+
+		#contact .caption{
+			font-weight:bold;
+			display:block;
+			margin-bottom:10px;
+		}	
+
+		#contact .label{
+			font-size:0.9em;
+			color:#aaa;
+			display:block;
+		}	
+
+		#contact INPUT[type=text]{
+			background-color:#fdfbd5;
+			border:solid 1px #aaa;
+			display:block;
+			width:350px;
+			margin-bottom:10px;
+		}	
+	   
+	    #msg_content{
+			height:200px;
+			background-color:#fdfbd5;
+			border:solid 1px #aaa;
+			display:block;
+			width:350px;
+			margin-bottom:10px;
+		}
+		
+		#btnSend{
+			width:50px;
+			background-color:#c4ad89;
+			border:solid 1px #aaa;
+			display:block;
+			float:right;
+		}
+		
+		#ContactBox .splitter{
+			display:in-block;
+			float:left;
+			height:380px;
+			width:2px;
+			background-color:black;
+			margin-left:50px;
+		}
+	   
+    </style>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/serial.js"></script>
+    <script type="text/javascript" src="works/serial/serial_list.js"></script>
+    <script language="javascript">
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <hr id="topBar" />
+    <div id="mainLogo" class="pagePadding">
+        <a href="index.html"><img src="img/LOGO.png"></a>
+    </div>
+
+    <!-- navigator -->
+    <div id="navigator" class="pagePadding">
+        <a class="illustration" href="illustration.html">ILLUSTRATION</a>
+        <a class="painting" href="#">PAINTING</a>
+        <a class="sketch" href="sketch.html">SKETCH BOOK</a>
+        <a class="serial" href="serial.html">SERIAL</a>
+        <a class="tab-contact" href="#">CONTACT</a>
+    </div>
+
+    <hr class="line gold" />
+
+    <!-- contact -->
+    <div id="content" class="pagePadding">
+        <div id="ContactBox">
+			<div id="contact">
+				<SPAN class="caption">LEAVE A MESSAGE</SPAN>
+				<SPAN class="label">NAME</SPAN>
+				<input type="text" id="msg_name"></input>
+				<SPAN class="label">EMAIL</SPAN>
+				<input type="text" id="msg_email"></input>
+				<textarea type="text" id="msg_content"></textarea>
+				<input type="button" id="btnSend" value="SEND"></input>
+			</div>
+			<div class="splitter"></div>
+        </div>
+    </div>
+
+    <!-- foooter -->
+    <div id="footerBox"  class="gold">
+        <div id="footer">
+			<div class="mail"><img src="img/mail.png"/><SPAN>ccychen111@gmail.com</SPAN></div>
+			<div class="splitter"></div>
+			<div class="post">
+				<span class="recentPost">RECENT POST</span>
+				<p>prosseing</p>
+				<p>chinese painting</p>
+				<p>food</p>
+			</div>
+		    <div class="copyright">
+				ALL WORKS COPYRIGHT &copy;2015 CCY CHEN
+				<p>ALL RIGHT RESERVED</p>
+			</div>
+		</div>
+    </div>
+</body>
+</html>

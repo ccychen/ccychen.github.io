@@ -6,7 +6,7 @@ function SerialBox(sb, folders, config) {
     var _rows = [];
     var _config = {
         "width": 960,
-        "folder_width": 280,
+        "folder_width": 294,
         "margin": 10,
         "rows_per_page": 2,
         "css_class": "SerialBox",
@@ -58,7 +58,7 @@ function SerialBox(sb, folders, config) {
                 _rows.push(row);
                 row = new Row(_config["width"], _config["folder_width"], _config["margin"]);
             }
-            row.Add(_folders[i][0], _folders[i][1], _config["path"] + _folders[i][0] + ".jpg")
+            row.Add(_folders[i][0], _folders[i][1], _config["path"] + _folders[i][2])
         }
 
         if (row.NumbrOfFolder()) {

@@ -8,60 +8,60 @@
     <style>
         /* slider */
         #slider{
-        position:relative;
-        max-width:960px;	/*设置首页图片的宽度*/
-        margin:0px auto;
+			position:relative;
+			max-width:960px;	/*设置首页图片的宽度*/
+			margin:0px auto;
         }
 
         #slider IMG.image{
-        width:100%;
+			width:100%;
         }
 
         #slider IMG.image:first-child{
-        position:relative;
-        display:block;
-        z-index:599;
+			position:relative;
+			display:block;
+			z-index:599;
         }
 
         #slider IMG.image:nth-child(n+2){
-        display:none;
-        position:absolute;
-        left:0;
-        top:0;
-        z-index:597;
+			display:none;
+			position:absolute;
+			left:0;
+			top:0;
+			z-index:597;
         }
 
         #slider IMG.image:nth-child(2){
-        z-index:598;
-        opacity:1.0;
+			z-index:598;
+			opacity:1.0;
         }
 
         #slider .dots{
-        margin: 15px auto;
-        text-align:center;
+			margin: 15px auto;
+			text-align:center;
         }
 
         #slider DIV.dot{
-        border: 0px;
-        display:inline-block;
-        border: 0px;
-        width: 6px;
-        height: 6px;
-        background-repeat:no-repeat;
+			border: 0px;
+			display:inline-block;
+			border: 0px;
+			width: 6px;
+			height: 6px;
+			background-repeat:no-repeat;
         }
 
         #slider DIV.dot:nth-child(n+2){
-        margin-left: 20px;
+			margin-left: 20px;
         }
 
         #slider DIV.normal{
-        cursor:pointer;
-        background-image:url("../img/dot-grey.png");
+			cursor:pointer;
+			background-image:url("img/dot-grey.png");
         }
 
         #slider DIV.current{
-        cursor:default;
-        background-image:url("../img/dot-gold.png");
+			cursor:default;
+			background-image:url("img/dot-gold.png");
         }
     </style>
     <script src="js/jquery-1.11.2.min.js"></script>
@@ -78,7 +78,6 @@
 </head>
 <body>
     <!-- header -->
-    <hr id="topBar"/>
     <div id="mainLogo" class="pagePadding">
         <img src="img/LOGO.png">
     </div>
@@ -89,10 +88,10 @@
         <a class="painting" href="#">PAINTING</a>
         <a class="sketch" href="sketch.html">SKETCH BOOK</a>
         <a class="serial" href="serial.html">SERIAL</a>
-        <a class="contact" href="#">CONTACT</a>
+        <a class="contact" href="contact.html">CONTACT</a>
     </div>
 
-    <hr class="line grey" />
+    <hr class="line grey" style="height:2px" />
 
     <!-- slider -->
     <div id="content" class="pagePadding">
@@ -106,26 +105,21 @@
     </div>
 
     <!-- foooter -->
-    <div id="footerBox" class="gradual-gold">
-        <table id="footer">
-            <tr>
-                <td class="contact">
-                    <img class="logo" src="img/logo-footer.png" />
-                    <div class="mail"><img src="img/mail.png" /><span>ccyb166er@gmail.com</span></div>
-                </td>
-                <td class="post">
-                    <span class="recentPost">RECENT POST</span>
-                    <p>sketck book 22</p>
-                    <p>food</p>
-                    <p>chinese painting</p>
-                    <p>prosseing</p>
-                </td>
-                <td class="copyright">
-                    <span class="copyright_note">ALL WORKS &copy; CCY 2015</span>
-                    <p>please do not reproduce without the expressed written consent of CCY</p>
-                </td>
-            </tr>
-        </table>
+    <div id="footerBox">
+        <div id="footer">
+			<div class="mail"><img src="img/mail.png"/><SPAN>ccychen111@gmail.com</SPAN></div>
+			<div class="splitter"></div>
+			<div class="post">
+				<span class="recentPost">RECENT POST</span>
+				<p>prosseing</p>
+				<p>chinese painting</p>
+				<p>food</p>
+			</div>
+		    <div class="copyright">
+				ALL WORKS COPYRIGHT &copy;2015 CCY CHEN
+				<p>ALL RIGHT RESERVED</p>
+			</div>
+		</div>
     </div>
 </body>
 </html>
