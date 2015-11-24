@@ -10,12 +10,13 @@
         #slider{
 			position:relative;
 			min-width:640px;	/*设置首页图片的宽度*/
-			width:67%;
+			width:956px;
 			margin:0px auto;
         }
 
         #slider IMG.image{
 			width:100%;
+			height:632px;
         }
 
         #slider IMG.image:first-child{
@@ -38,7 +39,7 @@
         }
 
         #slider .dots{
-			margin: 15px auto;
+			padding-top: 20px;
 			text-align:center;
         }
 
@@ -79,12 +80,12 @@
 </head>
 <body>
     <!-- header -->
-    <div id="mainLogo" class="pagePadding">
+    <div id="mainLogo">
         <img src="img/LOGO.png">
     </div>
 
     <!-- navigator -->
-    <div id="navigator" class="pagePadding">
+    <div id="navigator">
         <a class="illustration" href="illustration.html">ILLUSTRATION</a>
         <a class="painting" href="#">PAINTING</a>
         <a class="sketch" href="sketch.html">SKETCH BOOK</a>
@@ -95,13 +96,13 @@
     <hr class="line grey" style="height:2px" />
 
     <!-- slider -->
-    <div id="content" class="pagePadding">
+    <div id="content">
         <div id="slider">
         </div>
     </div>
 
     <!-- pager -->
-    <div id="pagerBox" class="pagePadding">
+    <div id="pagerBox">
 		<div id="pager"></div>
     </div>
 
@@ -111,7 +112,7 @@
 			<div class="mail"><img src="img/mail.png"/><SPAN>ccychen111@gmail.com</SPAN></div>
 			<div class="splitter"></div>
 			<div class="post">
-				<span class="recentPost">RECENT POST</span>
+				<span>RECENT POST</span>
 				<p>prosseing</p>
 				<p>chinese painting</p>
 				<p>food</p>
