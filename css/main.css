@@ -26,13 +26,13 @@ A{
 }
 
 #mainLogo{
-	width:1024px;
+	width:67%;
 	margin:20px auto;
 }
 
 /*navigator*/
 #navigator{
-	width:1024px;
+	width:67%;
 	margin:10px auto 0px auto;
 }
 
@@ -124,7 +124,7 @@ hr.line.gold{
 
 #footer{
     height:130px;
-	width:1024px;
+	width:67%;
 }
 
 #footerBox.grey{
