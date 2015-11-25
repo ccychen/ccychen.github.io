@@ -3,7 +3,7 @@
 }
 
 body{
-	background-color:white;
+	background-color: white;
 	margin:0px;
     font-size:13px;
     min-width:640px;
@@ -14,9 +14,34 @@ A{
 	text-decoration:none;
 }
 
+/*color*/
+.bgGrey{
+	background-color:#6e6c6d;
+}
+
+.bgGold{
+	background-color:#e1d5c5;
+}
+
+.bgOrange{
+	background-color:#e4714c;
+}
+
+.bgGreen{
+	background-color:#61caba;
+}
+
+
 /* header */
+#headerBox{
+	width:100%;
+	padding-top:20px;
+	background-color: white;
+}
+
+/* logo */
 #mainLogo{
-	margin:20px auto;
+	margin:0px auto;
 	width:971px;
 	height:100px;
 }
@@ -26,6 +51,7 @@ A{
 	margin:18px auto 0px auto;
 	width:971px;
 	height:35px;
+	background-color: white;
 }
 
 #navigator A{
@@ -91,25 +117,12 @@ hr.line{
 	margin:0px;
 	border:0px;
 }
-hr.line.black{
-	background-color:black;
-}
-hr.line.grey{
-	background-color:#AAA;
-}
-hr.line.orange{
-	background-color:#cf6744;
-}
-hr.line.gold{
-	background-color:#c4ad89;
-}
-
 
 /*content*/
-#content{
-	background-repeat:repeat-x;
-	background-position: center top;
-    margin-top:34px;
+#contentBox{
+	background-color: white;
+    padding-top:34px;
+	padding-bottom:42px;
 }
 
 /* pageer */
@@ -118,8 +131,7 @@ hr.line.gold{
 	background-color: #e1ddda;
 	border-top:solid 1px #acacac;
 	border-bottom:solid 1px #acacac;
-	margin:42px auto;
-	
+	margin:0px auto;
 }
 
 #pager{
@@ -153,22 +165,6 @@ hr.line.gold{
 
 #footer{
     height:130px;
-}
-
-#footerBox.grey{
-	background-color:#6e6c6d;
-}
-
-#footerBox.gold{
-	background-color:#e1d5c5;
-}
-
-#footerBox.orange{
-	background-color:#e4714c;
-}
-
-#footerBox.green{
-	background-color:#61caba;
 }
 
 #footer{
