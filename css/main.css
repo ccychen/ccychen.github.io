@@ -123,6 +123,7 @@ hr.line{
 	background-color: white;
     padding-top:34px;
 	padding-bottom:42px;
+	min-height:400px;
 }
 
 /* pageer */
