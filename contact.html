@@ -1,81 +1,99 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-    <meta charset="utf-8" />
-    <title>CCY CHEN</title>
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
-    <link rel="stylesheet" href="css/main.css" />
-    <style>
-		#ContactBox{
-			min-width:350px;
-			width:1024px;
-			margin:0px auto;
-			height:450px;
-		}
-
-		#contact{
-			width:350px;
-			padding-left:100px;
-			padding-top:20px;
-			float:left;
-		}
-
-		#contact .caption{
-			font-weight:bold;
-			display:block;
-			margin-bottom:10px;
-		}	
-
-		#contact .label{
-			font-size:0.9em;
-			color:#aaa;
-			display:block;
-		}	
-
-		#contact .field{
-			background-color:#fdfbd5;
-			border:solid 1px #aaa;
-			display:block;
-			width:350px;
-			margin:0px 0px 10px 0px;
-			padding:0px;
+	<meta charset="utf-8" />
+	<title>CCY CHEN</title>
+	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="css/main.css" />
+	<style>
+		#ContactBox {
+			min-width: 350px;
+			width: 1024px;
+			margin: 0px auto;
+			height: 680px;
 		}
 		
-		#contact .btnSend{
-			width:70px;
-			height:25px;
-			border:solid 1px #aaa;
-			float:right;
-			background-image:url("img/send.png");
-			background-repeat:no-repeat;
-			cursor:pointer;
+		#contact {
+			width: 380px;
+			padding-left: 100px;
+			padding-top: 62px;
+			float: left;
 		}
 		
-		#ContactBox .splitter{
-			display:in-block;
-			float:left;
-			height:380px;
-			width:2px;
-			background-color:black;
-			margin-left:50px;
+		#contact .caption {
+			font-weight: bold;
+			display: block;
+			margin-bottom: 16px;
 		}
-	   
-    </style>
-    <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/serial.js"></script>
-    <script type="text/javascript" src="works/serial/serial_list.js"></script>
-    <script language="javascript">
-    </script>
+		
+		#contact .label {
+			font-size: 0.9em;
+			color: #aaa;
+			display: block;
+		}
+		
+		#contact .field {
+			background-color: #fdfbd5;
+			border: solid 1px #aaa;
+			display: block;
+			width: 376px;
+			height: 33px;
+			margin: 0px 0px 10px 0px;
+			padding: 0px;
+			font-size: 1.5em;
+		}
+		
+		#contact .contentField {
+			margin-top: 25px!important;
+			background-color: #fdfbd5;
+			border: solid 1px #aaa;
+			display: block;
+			width: 376px;
+			height: 310px;
+			margin: 0px;
+			padding: 0px;
+			font-size: 1.5em;
+		}
+		
+		#contact .btnSend {
+			margin-top: 17px;
+			width: 70px;
+			height: 25px;
+			border: solid 1px #aaa;
+			background-image: url("img/send.png");
+			background-repeat: no-repeat;
+			cursor: pointer;
+			display: block;
+			float: right;
+		}
+		
+		#ContactBox .splitter {
+			display: in-block;
+			float: left;
+			height: 580px;
+			width: 2px;
+			background-color: black;
+			margin-left: 50px;
+		}
+	</style>
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/serial.js"></script>
+	<script type="text/javascript" src="works/serial/serial_list.js"></script>
+	<script language="javascript">
+
+	</script>
 </head>
+
 <body class="bgGold">
-    <!-- header -->
+	<!-- header -->
 	<div id="headerBox">
 		<!-- logo -->
 		<div id="mainLogo">
 			<a href="index.html"><img src="img/LOGO.png"></a>
 		</div>
-		
+
 		<!-- navigator -->
 		<div id="navigator">
 			<a class="illustration" href="illustration.html">ILLUSTRATION</a>
@@ -85,31 +103,33 @@
 			<a class="tab-contact" href="#">CONTACT</a>
 		</div>
 	</div>
-    <hr class="line" />
+	<hr class="line" />
 
-    <!-- contact -->
-    <div id="contentBox">
-        <div id="ContactBox">
+	<!-- contact -->
+	<div id="contentBox">
+		<div id="ContactBox">
 			<div id="contact">
-				<SPAN class="caption">LEAVE A MESSAGE</SPAN>
+				<SPAN class="caption">SEND ME A EMAIL</SPAN>
 				<SPAN class="label">NAME</SPAN>
-				<input type="text" class="field"></input>
-				<SPAN class="label">EMAIL</SPAN>
-				<input type="text" class="field"></input>
-				<textarea type="text" class="field" rows="15"></textarea>
-				<input type="button" class="btnSend" value=" "></input>
+				<input type="text" class="field" id="sender_name"></input>
+				<!-- SPAN class="label">EMAIL</SPAN>
+				<input type="text" class="field" id="sender_email"></input -->
+				<textarea type="text" id="msg_body" class="contentField"></textarea>
+				<input type="button" id="btnSend" class="btnSend" value=" "></input>
 			</div>
 			<div class="splitter"></div>
-        </div>
-    </div>
-    <!-- pager -->
-    <div id="pagerBox">
+		</div>
+	</div>
+	<!-- pager -->
+	<div id="pagerBox">
 		<div id="pager"></div>
-    </div>
-    <!-- foooter -->
-    <div id="footerBox">
-        <div id="footer">
-			<div class="mail"><img src="img/mail.png"/><SPAN>ccychen111@gmail.com</SPAN></div>
+	</div>
+	<!-- foooter -->
+	<div id="footerBox">
+		<div id="footer">
+			<div class="mail"><img src="img/mail.png" />
+				<SPAN>ccychen111@gmail.com</SPAN>
+			</div>
 			<div class="splitter"></div>
 			<div class="post">
 				<span>RECENT POST</span>
@@ -117,11 +137,21 @@
 				<p>chinese painting</p>
 				<p>food</p>
 			</div>
-		    <div class="copyright">
+			<div class="copyright">
 				ALL WORKS COPYRIGHT &copy;2015 CCY CHEN
 				<p>ALL RIGHT RESERVED</p>
 			</div>
 		</div>
-    </div>
+	</div>
 </body>
+<script language=javascript>
+	$(function(){
+		$("#btnSend").click(function(){
+			var name = $("#sender_name").val();
+			var body = $("#msg_body").val();
+			//window.open('mailto:ccychen111@gmail.com?subject=hello ccychen&body=' + body);
+		});
+	});
+</script>
+	
 </html>

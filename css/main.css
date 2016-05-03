@@ -10,7 +10,9 @@ body{
 	font-family: Droid,helvetIca,arial;
 }
 
-A{
+a,
+a:visited,
+a:hover{
 	text-decoration:none;
 }
 
@@ -70,7 +72,7 @@ A{
 }
 
 #navigator .painting{
-    width:54px;
+    width:84px;
 }
 #navigator .painting:hover{
     background-image: url("../img/nav-painting.png");
