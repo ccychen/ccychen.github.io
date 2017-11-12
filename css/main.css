@@ -14,13 +14,6 @@ a:hover{
 }
 
 /*font*/
-.font-sub-title-1{
-    font-size:0.8em;
-    font-weight:bold;
-}
-.font-xs{
-    font-size: 0.8em;
-}
 
 /*color*/
 .bg-grey{
@@ -86,7 +79,6 @@ header{
     display:inline-block;
 	line-height:35px;
 	font-size:0.7em;
-	font-weight:900;
 	color:black;
 	padding:0px 10px 0px 10px;
 	background-repeat: no-repeat;
@@ -137,8 +129,10 @@ header{
 footer{
     margin: 0 auto -60px;
     padding-top: 10px;
+    font-weight: 200;
     font-size: 0.7em;
     height: 150px;
+    letter-spacing: 0.1em;
 }
 
 footer .copyright{
@@ -183,4 +177,56 @@ footer .post ul{
     width: 6px;
     height: 6px;
     border-radius: 6px;
+}
+
+ /* serial folder */
+ .SerialBox {
+    margin: 15px auto;
+    max-width: 1200px;
+}
+
+.SerialBox .cell {
+    padding-top: 20px;
+    cursor: pointer;
+}
+
+.SerialBox .cell .frame {
+    min-width: 200px;
+    max-width: 294px;
+    text-align: center;
+}
+
+.SerialBox .cell .frame img {
+    width: 100%;
+}
+.SerialBox .cell A {
+    color: black;
+}
+
+.SerialBox .cell .caption {
+    border-left: solid 1px #acacac;
+    border-right: solid 1px #acacac;
+    border-bottom: solid 1px #acacac;
+    height: 60px;
+    padding-top: 10px;
+    text-align: center;
+    font-family: Corbel;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+ /* album */
+.album{
+    margin-top:10px;
+    margin-bottom:10px;
+    min-width:640px;
+}
+
+.album .row{
+    padding:0px;
+    margin-top: 20px;
+}
+
+.album .row img:nth-child(n+1){
+    margin-left:20px;
 }

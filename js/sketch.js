@@ -1,5 +1,5 @@
 ﻿//Album
-function Album(album, images, config) {
+function Sketchbook(album, images, config) {
     var _$album = album;
     var _images = images;
     var _rows = [];

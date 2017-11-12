@@ -78,7 +78,7 @@ function SerialBox(sb, folders, config) {
             var $folder = $("<div/>");
             var f = _folders[j];
             
-            $folder.addClass("col-xs-4 col-sm-3 cell");
+            $folder.addClass("col-xs-6 col-sm-4 col-md-3 col-2 cell");
             $folder.click({ folder: f[0] }, function (e) {
                 var url = "detail.html?cate=serial&id=" + e.data.folder;
                 window.open(url, '_blank');
