@@ -28,6 +28,15 @@ a:hover{
 	background-color:#e4714c;
 }
 
+.bg-green{
+	background-color:#61caba;
+}
+
+.bg-gold{
+	background-color:#c4ad89;
+}
+
+
 .bg-white{
 	background-color:white;
 }
@@ -207,12 +216,12 @@ footer .post ul{
     border-left: solid 1px #acacac;
     border-right: solid 1px #acacac;
     border-bottom: solid 1px #acacac;
-    height: 60px;
+    height: 40px;
     padding-top: 10px;
     text-align: center;
     font-family: Corbel;
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: normal;
+    font-size: 0.9em;
 }
 
  /* album */
@@ -229,4 +238,75 @@ footer .post ul{
 
 .album .row img:nth-child(n+1){
     margin-left:20px;
+}
+
+#ContactBox {
+    min-width: 350px;
+    width: 1024px;
+    margin: 0px auto;
+    height: 680px;
+}
+
+/* contact */
+#contact {
+    width: 380px;
+    padding-left: 100px;
+    padding-top: 62px;
+    float: left;
+}
+
+#contact .caption {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 16px;
+}
+
+#contact .label {
+    font-size: 0.9em;
+    color: #aaa;
+    display: block;
+}
+
+#contact .field {
+    background-color: #fdfbd5;
+    border: solid 1px #aaa;
+    display: block;
+    width: 376px;
+    height: 33px;
+    margin: 0px 0px 10px 0px;
+    padding: 0px;
+    font-size: 1.5em;
+}
+
+#contact .contentField {
+    margin-top: 25px!important;
+    background-color: #fdfbd5;
+    border: solid 1px #aaa;
+    display: block;
+    width: 376px;
+    height: 310px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5em;
+}
+
+#contact .btnSend {
+    margin-top: 17px;
+    width: 70px;
+    height: 25px;
+    border: solid 1px #aaa;
+    background-image: url("img/send.png");
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    float: right;
+}
+
+#ContactBox .splitter {
+    display: in-block;
+    float: left;
+    height: 580px;
+    width: 2px;
+    background-color: black;
+    margin-left: 50px;
 }

@@ -3,107 +3,39 @@
 
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>CCY CHEN</title>
 	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	 crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css" />
-	<style>
-		#ContactBox {
-			min-width: 350px;
-			width: 1024px;
-			margin: 0px auto;
-			height: 680px;
-		}
-		
-		#contact {
-			width: 380px;
-			padding-left: 100px;
-			padding-top: 62px;
-			float: left;
-		}
-		
-		#contact .caption {
-			font-weight: bold;
-			display: block;
-			margin-bottom: 16px;
-		}
-		
-		#contact .label {
-			font-size: 0.9em;
-			color: #aaa;
-			display: block;
-		}
-		
-		#contact .field {
-			background-color: #fdfbd5;
-			border: solid 1px #aaa;
-			display: block;
-			width: 376px;
-			height: 33px;
-			margin: 0px 0px 10px 0px;
-			padding: 0px;
-			font-size: 1.5em;
-		}
-		
-		#contact .contentField {
-			margin-top: 25px!important;
-			background-color: #fdfbd5;
-			border: solid 1px #aaa;
-			display: block;
-			width: 376px;
-			height: 310px;
-			margin: 0px;
-			padding: 0px;
-			font-size: 1.5em;
-		}
-		
-		#contact .btnSend {
-			margin-top: 17px;
-			width: 70px;
-			height: 25px;
-			border: solid 1px #aaa;
-			background-image: url("img/send.png");
-			background-repeat: no-repeat;
-			cursor: pointer;
-			display: block;
-			float: right;
-		}
-		
-		#ContactBox .splitter {
-			display: in-block;
-			float: left;
-			height: 580px;
-			width: 2px;
-			background-color: black;
-			margin-left: 50px;
-		}
-	</style>
-	<script src="js/jquery-1.11.2.min.js"></script>
-	<script src="js/main.js"></script>
-	<script src="js/serial.js"></script>
-	<script type="text/javascript" src="works/serial/serial_list.js"></script>
-	<script language="javascript">
-
-	</script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	 crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body class="bgGold">
 	<!-- header -->
-	<div id="headerBox">
-		<!-- logo -->
-		<div id="mainLogo">
-			<a href="index.html"><img src="img/LOGO.png"></a>
+	<header>
+		<div>
+			<a href="index.html">
+				<img id="mainLogo" src="img/LOGO.png">
+			</a>
 		</div>
-
 		<!-- navigator -->
 		<div id="navigator">
 			<a class="illustration" href="illustration.html">ILLUSTRATION</a>
-			<a class="painting" href="#">PAINTING</a>
-			<a class="sketch" href="sketch.html">SKETCH BOOK</a>
 			<a class="serial" href="serial.html">SERIAL</a>
 			<a class="tab-contact" href="#">CONTACT</a>
 		</div>
-	</div>
-	<hr class="line" />
+	</header>
+	<hr class="rule-style-1 bg-gold" />
 
 	<!-- contact -->
 	<div id="contentBox">
@@ -125,33 +57,26 @@
 		<div id="pager"></div>
 	</div>
 	<!-- foooter -->
-	<div id="footerBox">
-		<div id="footer">
-			<div class="mail"><img src="img/mail.png" />
-				<SPAN>ccychen111@gmail.com</SPAN>
+	<hr class="bg-grey rule-style-2" />
+	<footer class="container-fluid bg-gold">
+		<div class="row no-gutters">
+			<div class="col-sm-6 col-xs-12">
+				<i class="fa fa-envelope" aria-hidden="true"></i> ccychen111@gmail.com
 			</div>
-			<div class="splitter"></div>
-			<div class="post">
-				<span>RECENT POST</span>
-				<p>prosseing</p>
-				<p>chinese painting</p>
-				<p>food</p>
-			</div>
-			<div class="copyright">
-				ALL WORKS COPYRIGHT &copy;2015 CCY CHEN
-				<p>ALL RIGHT RESERVED</p>
+			<div class="col-sm-6 col-xs-12 copyright">
+				All works copyright&copy; ccy chen, please do not use without permission
 			</div>
 		</div>
-	</div>
+	</footer>
 </body>
 <script language=javascript>
-	$(function(){
-		$("#btnSend").click(function(){
+	$(function () {
+		$("#btnSend").click(function () {
 			var name = $("#sender_name").val();
 			var body = $("#msg_body").val();
 			//window.open('mailto:ccychen111@gmail.com?subject=hello ccychen&body=' + body);
 		});
 	});
 </script>
-	
+
 </html>

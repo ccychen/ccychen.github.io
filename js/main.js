@@ -20,6 +20,7 @@ function Album(album, images, config) {
         "target_row_height": 240,
         "max_row_height": 240,
         "margin": 20,	//for calculation, also define in css
+        "img_path":""
     }
 
     for (key in config) {
@@ -88,8 +89,8 @@ function Album(album, images, config) {
             var $row = $("<div/>");
             $row.height(r.height()).addClass("row");
             for (var j = 0; j < r.numbrOfImage() ; j++) {
-                var $link = $("<A target='blank'/>").attr("href", r.getImage(j)[0]);
-                var $img = $("<img/>").attr("src", r.getImage(j)[0]);
+                var $link = $("<A target='blank'/>").attr("href", _config["img_path"] + r.getImage(j)[0]);
+                var $img = $("<img/>").attr("src", _config["img_path"] + r.getImage(j)[0]);
                 $img.attr("height", r.height());
                 $link.append($img);
                 $row.append($link);
@@ -100,7 +101,6 @@ function Album(album, images, config) {
     }
 
     function Init() {
-        console.log(_config["width"]);
         _rows = [];
         var row = new Row(_config["width"], _config["target_row_height"], _config["margin"]);
         var len = _images.length;
