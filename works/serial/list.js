@@ -1,17 +1,8 @@
 
 var FILE_LIST = [
-["CG sketch/101103.jpg",1000,1000],
-["CG sketch/101115ss.jpg",800,1200],
-["CG sketch/110125.jpg",1000,800],
-["CG sketch/2.jpg",850,462],
-["CG sketch/6 -moon night.jpg",835,596],
-["CG sketch/ccy.jpg",1243,824],
-["CG sketch/IMG_20171019_0062 copy.jpg",829,522],
-["CG sketch/s4--2.jpg",850,987],
-["CG sketch/s4.jpg",776,1057],
-["CG sketch/s9.jpg",850,880],
-["CG sketch/3.jpg",850,508],
-["CG sketch/4.jpg",850,1164],
+    
+["young forever/y1-f.jpg",1134,1249],
+["young forever/y2-f.jpg",1134,1249],
 
 ["CG18/nana080607.jpg",850,1287],
 ["CG18/xmas.jpg",850,1273],
@@ -104,6 +95,20 @@ var FILE_LIST = [
 ["sketch book -sai/4.jpg",1000,800],
 
 
+["CG sketch/101103.jpg",1000,1000],
+["CG sketch/101115ss.jpg",800,1200],
+["CG sketch/110125.jpg",1000,800],
+["CG sketch/2.jpg",850,462],
+["CG sketch/6 -moon night.jpg",835,596],
+["CG sketch/ccy.jpg",1243,824],
+["CG sketch/IMG_20171019_0062 copy.jpg",829,522],
+["CG sketch/s4--2.jpg",850,987],
+["CG sketch/s4.jpg",776,1057],
+["CG sketch/s9.jpg",850,880],
+["CG sketch/3.jpg",850,508],
+["CG sketch/4.jpg",850,1164],
+
+
 ["sketch-bw/bonrneo-3-s.jpg",800,516],
 ["sketch-bw/IMG_20171019_0008-1.jpg",658,496],
 ["sketch-bw/IMG_20171019_0024-1 copy.jpg",852,658],
@@ -128,8 +133,5 @@ var FILE_LIST = [
 ["trip in Provence/5.jpg",850,609],
 ["trip in Provence/6.jpg",850,627],
 ["trip in Provence/7.jpg",850,612],
-["trip in Provence/8.jpg",850,615],
-
-["young forever/y1-f.jpg",1134,1249],
-["young forever/y2-f.jpg",1134,1249]
+["trip in Provence/8.jpg",850,615]
 ];
