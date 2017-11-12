@@ -3,12 +3,9 @@ function SerialBox(sb, folders, config) {
     //configuration
     var _sb = sb;
     var _folders = folders;
-    var _rows = [];
     var _config = {
-        "width": 960,
         "folder_width": 294,
         "margin": 10,
-        "rows_per_page": 2,
         "css_class": "SerialBox",
         "path": "works/serial/cover/"
     };
@@ -19,7 +16,7 @@ function SerialBox(sb, folders, config) {
 
     /*initialize*/
     var _foldersPerRow, _numPages = 1, _pageNum = 1;
-    Init();
+    Render();
 
     //inner classes
     function Row(rowWidth, folderWidth, margin) {
@@ -71,63 +68,36 @@ function SerialBox(sb, folders, config) {
     }
 
     //render method
-    function Render(page) {
-        var startIdx = _config["rows_per_page"] * (page - 1);
-        var endIdx = startIdx + _config["rows_per_page"] - 1;
-        endIdx = _rows.length - 1 < endIdx ? _rows.length - 1 : endIdx;
+    function Render() {
+        var startIdx = 0;
+        var endIdx = _folders.length;
 
         //clear rows
         _sb.empty();
-        for (var i = startIdx; i <= endIdx; i++) {
-            var r = _rows[i];
-            var $row = $("<DIV/>").addClass("row");
+        for (var j = startIdx; j < endIdx; j++) {
+            var $folder = $("<div/>");
+            var f = _folders[j];
+            
+            $folder.addClass("col-xs-4 col-sm-3 cell");
+            $folder.click({ folder: f[0] }, function (e) {
+                var url = "detail.html?cate=serial&id=" + e.data.folder;
+                window.open(url, '_blank');
+            });
 
-            for (var j = 0; j < _foldersPerRow ; j++) {
-                var $folder = $("<div/>");
-                $row.append($folder);
+            var $frame = $("<div/>");
+            $frame.addClass("frame");
+            $folder.append($frame);
 
-                if (j < r.NumbrOfFolder()) {
-                    var f = r.getFolderInfo(j);
+            var $thumbImg = $("<IMG/>");
+            $thumbImg.attr('src', _config.path + f[2]);
+            $frame.append($thumbImg);
 
-                    $folder.addClass("cell");
-                    $folder.click({ folder: f[0] }, function (e) {
-                        var url = "detail.html?cate=serial&id=" + e.data.folder;
-                        window.open(url, '_blank');
-                    });
+            var $caption = $("<div/>");
+            $caption.addClass("caption");
+            $caption.html(f[1]);
+            $frame.append($caption);
 
-                    var $thumb = $("<div/>");
-                    $thumb.addClass("thumb");
-                    $folder.append($thumb);
-
-                    var $thumbImg = $("<IMG/>");
-                    $thumbImg.attr('src', f[2]);
-                    $thumb.append($thumbImg);
-
-                    var $caption = $("<div/>");
-                    $caption.addClass("caption");
-                    $caption.html(f[1]);
-                    $folder.append($caption);
-                } else {
-                    //fake
-                    $folder.addClass("fake_cell");
-                }
-            }
-
-            _sb.append($row);
+            _sb.append($folder);
         }
-    }
-
-    this.Resize = function (width) {
-        _config["width"] = width;
-        _pageNum = 1;
-        Init();
-    }
-
-    this.NumbrOfPage = function () {
-        return _numPages;
-    }
-
-    this.Show = function (page) {
-        Render(page);
     }
 }

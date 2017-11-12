@@ -3,124 +3,92 @@
 
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>CCY CHEN</title>
 	<link rel="shortcut icon" href="img/icon.png" type="image/x-icon" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
-		crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+	 crossorigin="anonymous">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="css/main.css" />
-	<style>
-		#slider {
-			position: relative;
-			min-width: 640px;
-			width: 956px;
-			margin: 0px auto;
-		}
-		
-		.carousel-indicators {
-			bottom: -40px;
-		}
-		
-		.carousel-indicators>li {
-			border: 1px solid #c1c1c1;
-			background-color: #c1c1c1;
-			margin-left: 15px;
-			width: 6px;
-			height: 6px;
-			border-radius: 6px;
-		}
-		
-		.carousel-indicators>li.active {
-			border: 1px solid #c5af8a;
-			background-color: #c5af8a;
-			margin-left: 15px;
-			width: 6px;
-			height: 6px;
-			border-radius: 6px;
-		}
-	</style>
-	<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
-		crossorigin="anonymous"></script>
-	<script src="js/main.js"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+	 crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+	 crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+	 crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </head>
 
 <body>
 	<!-- header -->
-	<div id="headerBox">
-		<div id="mainLogo">
-			<img src="img/LOGO.png">
+	<header>
+		<div>
+			<a href="index.html">
+				<img id="mainLogo" src="img/LOGO.png">
+			</a>
 		</div>
-
 		<!-- navigator -->
 		<div id="navigator">
 			<a class="illustration" href="illustration.html">ILLUSTRATION</a>
-			<a class="painting" href="#">PAINTING</a>
-			<a class="sketch" href="sketch.html">SKETCH BOOK</a>
 			<a class="serial" href="serial.html">SERIAL</a>
 			<a class="contact" href="contact.html">CONTACT</a>
 		</div>
-		<hr class="line bgGrey" />
-	</div>
-	<div id="contentBox">
-		<div id="slider">
-			<!-- slider -->
-			<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-				<!-- Indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="1"></li>
-					<li data-target="#carousel-example-generic" data-slide-to="2"></li>
-				</ol>
+	</header>
+	<hr class="rule-style-1 bg-grey" />
 
-				<!-- Wrapper for slides -->
-				<div class="carousel-inner" role="listbox">
-					<div class="item active">
-						<img src="slider/1.jpg">
+	<!-- slider -->
+	<div id="slider" class="container-fluid">
+		<div class="d-flex justify-content-between">
+			<div class="col-sm-3">
+			</div>
+			<div class="col-sm-6 col-xs-12">
+				<div id="carouselHome" class="carousel slide" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+						<li data-target="#carouselHome" data-slide-to="1"></li>
+						<li data-target="#carouselHome" data-slide-to="2"></li>
+					</ol>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img class="d-block w-100" src="slider/1.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="slider/2.jpg" alt="">
+						</div>
+						<div class="carousel-item">
+							<img class="d-block w-100" src="slider/3.jpg" alt="">
+						</div>
 					</div>
-					<div class="item">
-						<img src="slider/2.jpg">
-					</div>
-					<div class="item">
-						<img src="slider/3.jpg">
-					</div>
+					<a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
 				</div>
+			</div>
+			<div class="col-sm-3">
 
-				<!-- Controls -->
-				<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-					<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-					<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-					<span class="sr-only">Next</span>
-				</a>
 			</div>
 		</div>
-	</div>
-	<!-- pager -->
-	<div id="pagerBox">
-		<div id="pager"></div>
 	</div>
 
 	<!-- foooter -->
-	<div id="footerBox">
-		<div id="footer">
-			<div class="mail"><img src="img/mail.png" />
-				<SPAN>ccychen111@gmail.com</SPAN>
+	<hr class="bg-grey rule-style-2" />
+	<footer class="container-fluid ft-white bg-black">
+		<div class="row no-gutters">
+			<div class="col-sm-6 col-xs-12">
+				<i class="fa fa-envelope" aria-hidden="true"></i>ccyb166er@gmail.com
 			</div>
-			<div class="splitter"></div>
-			<div class="post">
-				<span>RECENT POST</span>
-				<p>prosseing</p>
-				<p>chinese painting</p>
-				<p>food</p>
-			</div>
-			<div class="copyright">
-				ALL WORKS COPYRIGHT &copy;2015 CCY CHEN
-				<p>ALL RIGHT RESERVED</p>
+			<div class="col-sm-6 col-xs-12 copyright">
+				All works copyright&copy; ccy chen, please do not use without permission
 			</div>
 		</div>
-	</div>
+	</footer>
 </body>
+
 
 </html>

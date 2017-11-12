@@ -36,6 +36,7 @@ function getParameterByName(name) {
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
 
+
 $(document).ready(function () {
 
     var $paint = $("#navigator").children(".painting");
