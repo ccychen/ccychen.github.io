@@ -38,24 +38,26 @@
 	<hr class="rule-style-1 bg-gold" />
 
 	<!-- contact -->
-	<div id="contentBox">
-		<div id="ContactBox">
-			<div id="contact">
+	<div class="fluid-container" style="background-color: #ede7f6;">
+		<div class="row w-100">
+			<!--div id="ContactBox" class="col-4 col-xs-12" type="text-align:right">
 				<SPAN class="caption">LEAVE A MESSAGE</SPAN>
 				<SPAN class="label">NAME</SPAN>
 				<input type="text" class="field" id="sender_name"></input>
 				<SPAN class="label">EMAIL</SPAN>
 				<input type="text" class="field" id="sender_email"></input>
 				<textarea type="text" id="msg_body" class="contentField"></textarea>
-				<input type="button" id="btnSend" class="btnSend" value=" "></input>
+				<input type="button" id="btnSend" class="btnSend" value="SEND"></input>
+			</div-->
+			<div class="col-sm-5 col-xs-12">
+					<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSccWO_BeI6o7sGRwQrUq1C3d7vy3Zm_qK8KizOfem6yv1NjtQ/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading...</iframe>
 			</div>
-			<div class="splitter"></div>
+			<div class="col-sm-7 col-xs-12">
+			</div>
 		</div>
+
 	</div>
-	<!-- pager -->
-	<div id="pagerBox">
-		<div id="pager"></div>
-	</div>
+
 	<!-- foooter -->
 	<hr class="bg-grey rule-style-2" />
 	<footer class="container-fluid bg-gold">
@@ -74,7 +76,7 @@
 		$("#btnSend").click(function () {
 			var name = $("#sender_name").val();
 			var body = $("#msg_body").val();
-			//window.open('mailto:ccychen111@gmail.com?subject=hello ccychen&body=' + body);
+			window.open('mailto:ccychen111@gmail.com?subject=hello ccychen&body=' + body);
 		});
 	});
 </script>

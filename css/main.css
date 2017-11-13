@@ -189,7 +189,7 @@ footer .post ul{
 }
 
  /* serial folder */
- .SerialBox {
+.SerialBox {
     margin: 15px auto;
     max-width: 1200px;
 }
@@ -242,71 +242,62 @@ footer .post ul{
 
 #ContactBox {
     min-width: 350px;
-    width: 1024px;
+
     margin: 0px auto;
     height: 680px;
 }
 
 /* contact */
-#contact {
+#ContactBox {
+    padding-top:20px;
     width: 380px;
-    padding-left: 100px;
-    padding-top: 62px;
-    float: left;
 }
 
-#contact .caption {
+#ContactBox .caption {
     font-weight: bold;
     display: block;
     margin-bottom: 16px;
 }
 
-#contact .label {
+#ContactBox .label {
     font-size: 0.9em;
     color: #aaa;
     display: block;
 }
 
-#contact .field {
+#ContactBox .field {
     background-color: #fdfbd5;
     border: solid 1px #aaa;
     display: block;
-    width: 376px;
-    height: 33px;
+    width:100%;
     margin: 0px 0px 10px 0px;
     padding: 0px;
-    font-size: 1.5em;
 }
 
-#contact .contentField {
+#ContactBox .contentField {
     margin-top: 25px!important;
     background-color: #fdfbd5;
     border: solid 1px #aaa;
     display: block;
-    width: 376px;
+    width:100%;
     height: 310px;
     margin: 0px;
     padding: 0px;
-    font-size: 1.5em;
 }
 
-#contact .btnSend {
+#ContactBox .btnSend {
     margin-top: 17px;
     width: 70px;
     height: 25px;
     border: solid 1px #aaa;
-    background-image: url("img/send.png");
-    background-repeat: no-repeat;
+    background-color: #fdfbd5;
     cursor: pointer;
     display: block;
     float: right;
 }
 
-#ContactBox .splitter {
-    display: in-block;
-    float: left;
-    height: 580px;
-    width: 2px;
-    background-color: black;
-    margin-left: 50px;
+.vertical-splitter{
+    width: 1px;
+    border-right: solid 1px #aaa;
+    height: 100%;
 }
