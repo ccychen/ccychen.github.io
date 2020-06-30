@@ -1,0 +1,266 @@
+/*
+ * CCY CHEN Website
+ * Copyright 2020
+ * Theme Styles
+ */
+html, body {
+  margin: 0;
+  min-width: 375px;
+  height: 100%;
+  color: #505050;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+.content-block {
+  height: calc(100% - 151px - 30px);
+}
+
+@media (max-width: 576px) {
+  .content-block {
+    height: calc(100% - 70px - 30px);
+  }
+}
+
+/* Mobile Menu */
+.mobile-nav-toggle {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  z-index: 999;
+  display: none;
+}
+
+.mobile-nav-toggle i {
+  color: #505050;
+  font-size: 2em;
+}
+
+@media (max-width: 576px) {
+  .mobile-nav-toggle {
+    display: block;
+  }
+}
+
+#mobile-nav {
+  z-index: 999;
+  display: none;
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  top: 70px;
+  bottom: 0px;
+  width: 100%;
+  padding-top: 20px;
+  background-color: #defbf3;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#mobile-nav.active {
+  display: block;
+}
+
+#mobile-nav .nav-links A {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: black;
+  padding: 15px;
+}
+
+#mobile-nav .contact-block {
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: absolute;
+  bottom: 50px;
+}
+
+#mobile-nav .contact-block > DIV {
+  padding: 0px;
+}
+
+#mobile-nav .contacts {
+  width: 100%;
+  margin: 0px;
+  font-size: 2.4em;
+}
+
+#mobile-nav .contacts > A {
+  padding: 0px;
+  text-align: center;
+}
+
+/* logo */
+header {
+  padding-top: 10px;
+  height: 150px;
+}
+
+@media (max-width: 576px) {
+  header {
+    height: 70px;
+  }
+}
+
+.header-logo {
+  margin-left: 10%;
+  height: 100px;
+}
+
+@media (max-width: 576px) {
+  .header-logo {
+    height: 60px;
+    margin-left: 10px;
+  }
+}
+
+.header-nav {
+  margin-top: 5px;
+  margin-left: 10%;
+}
+
+@media (max-width: 576px) {
+  .header-nav {
+    display: none;
+  }
+}
+
+.header-nav .nav-link {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 20px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1em;
+}
+
+.header-nav .nav-link.home.active, .header-nav .nav-link.home:hover {
+  background-color: #aeaa85;
+}
+
+.header-nav .nav-link.serial.active, .header-nav .nav-link.serial:hover {
+  background-color: #e4714c;
+}
+
+.header-nav .nav-link.sketchbook.active, .header-nav .nav-link.sketchbook:hover {
+  background-color: #75b7ab;
+}
+
+.header-nav .nav-link.paintings.active, .header-nav .nav-link.paintings:hover {
+  background-color: #f0456f;
+}
+
+.header-nav .nav-link.about.active, .header-nav .nav-link.about:hover {
+  background-color: #d7c928;
+}
+
+.header-ruler {
+  margin: 0px;
+  height: 2px;
+  background-color: #505050;
+  border: none;
+}
+
+@media (max-width: 576px) {
+  .header-ruler {
+    display: none;
+  }
+}
+
+footer {
+  position: sticky;
+  position: -webkit-sticky;
+  /* Safari */
+  bottom: 0px;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  padding-left: 10px;
+}
+
+footer.home {
+  background-color: #aeaa85;
+}
+
+footer.serial {
+  background-color: #e4714c;
+}
+
+footer.sketchbook {
+  background-color: #75b7ab;
+}
+
+footer.paintings {
+  background-color: #f0456f;
+}
+
+footer.about {
+  background-color: #d7c928;
+}
+
+footer .contact {
+  float: left;
+  vertical-align: middle;
+}
+
+@media (max-width: 768px) {
+  footer .contact {
+    display: none;
+  }
+}
+
+footer .contact A {
+  margin-right: 10px;
+  font-size: 1.2em;
+}
+
+footer .copyright {
+  float: right;
+  vertical-align: middle;
+  font-size: 0.9em;
+  padding-right: 10px;
+}
+
+@media (max-width: 576px) {
+  footer .copyright {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  footer .copyright {
+    float: left;
+  }
+}
+
+footer .mini-copyright {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  footer .mini-copyright {
+    display: block;
+  }
+}
+
+.owl-carousel {
+  height: 100%;
+  max-height: 100%;
+}
+
+.owl-stage-outer {
+  height: calc(100% - 50px);
+  max-height: calc(100% - 50px);
+}

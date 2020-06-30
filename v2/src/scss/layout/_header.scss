@@ -1,0 +1,70 @@
+/* logo */
+header{
+    padding-top: 10px;
+    height: 150px;
+    @media (max-width: $screen-sm) {
+        height: 70px;
+    }
+}
+
+.header-logo{
+    margin-left: 10%;
+    height:100px;    
+    @media (max-width: $screen-sm) {
+        height:60px;
+        margin-left: 10px;
+    }
+}
+
+.header-nav{
+    margin-top: 5px;
+    margin-left: 10%;
+    @media (max-width: $screen-sm) {
+        display:none;
+    }
+
+    & .nav-link{
+        display: inline-block;
+        padding: 5px 10px;
+        margin-right: 20px;
+        font-weight: bold;
+        color: black;
+        text-transform: uppercase;  
+        font-size: 1em;
+        &.home{
+            &.active, &:hover{
+                background-color: $cate-home;
+            }
+        }
+        &.serial{
+            &.active, &:hover{
+                background-color: $cate-serial;
+            }
+        }
+        &.sketchbook{
+            &.active, &:hover{
+                background-color: $cate-sketchbook;
+            }
+        }
+        &.paintings{
+            &.active, &:hover{
+                background-color: $cate-paintings;
+            }
+        }
+        &.about{
+            &.active, &:hover{
+                background-color: $cate-about;
+            }
+        }
+    }    
+}
+
+.header-ruler{
+    margin: 0px;
+    height: 2px;
+    background-color:$body-color;
+    border: none;
+    @media (max-width: $screen-sm) {
+        display:none;
+    }
+}   

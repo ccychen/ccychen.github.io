@@ -1,0 +1,17 @@
+/*
+ * CCY CHEN Website
+ * Copyright 2020
+ * Theme Styles
+ */
+// Helpers: Variables, Mixins and Placeholders
+@import 'helpers/variables';
+
+ // Base
+@import 'base/scaffolding';
+
+// Layout
+@import 'layout/mobilemenu';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/slider';
+

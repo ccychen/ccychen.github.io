@@ -1,0 +1,41 @@
+// START header
+block config
+  include ../helpers/config
+
+header
+  a(href='index.html')
+    img.header-logo(src='img/LOGO.png')
+ 
+  // navigator
+  nav.header-nav
+    if pageCate != "home"
+      a.nav-link.home(href='index.html') Home
+    else
+      div.nav-link.home.active Home
+    
+    if pageCate != "serial"
+      a.nav-link.serial(href='serial.html') Serial
+    else
+      div.nav-link.serial.active Serial
+    
+    if pageCate != "sketchbook"
+      a.nav-link.sketchbook(href='sketch-book.html') Sketch Book
+    else
+      div.nav-link.sketchbook.active Sketch Book
+
+
+    if pageCate != "paintings"
+      a.nav-link.paintings(href='paintings.html') Paintings
+    else
+      div.nav-link.paintings.active Paintings
+
+
+    if pageCate != "about"
+      a.nav-link.about(href='about.html') About
+    else
+      div.nav-link.about.active About
+
+  
+  hr.header-ruler
+
+  

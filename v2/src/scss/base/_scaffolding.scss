@@ -1,0 +1,27 @@
+//
+// Scaffolding
+// --------------------------------------------------
+html, body {
+  margin: 0;
+  min-width: 375px;
+  height: 100%;
+ 
+  color: $body-color;
+  font: {
+    family: $font-family-base;
+    size: $font-size-md;
+    weight: $font-weight-base;
+  }
+}
+
+// Links
+a {
+  text-decoration: none;
+}
+
+.content-block{
+  height: calc(100% - 151px - 30px);
+  @media (max-width: $screen-sm) {
+    height: calc(100% - 70px - 30px);
+  }
+}

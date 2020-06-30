@@ -1,0 +1,26 @@
+{
+  "name": "ccychen",
+  "version": "2.0.0",
+  "description": "CCY CHEN",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ccychen.com",
+  "homepage": "ccychen.com",
+  "devDependencies": {
+    "node-sass": "^4.14.0",
+    "grunt": "^1.1.0",
+    "grunt-autoprefixer": "^3.0.4",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-cache-pug-compile": "^4.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-pug": "^2.0.0",
+    "grunt-contrib-uglify": "^4.0.1",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-sass": "^3.1.0",
+    "pug": "^3.0.0  ",
+    "pug-inheritance": "^3.0.0-beta.2"
+  },
+  "dependencies": {}
+}
