@@ -127,7 +127,7 @@ header {
 }
 
 .header-logo {
-  margin-left: 10%;
+  margin-left: 5%;
   height: 100px;
 }
 
@@ -269,7 +269,13 @@ footer .mini-copyright {
 
 /* Category*/
 .categoryContainer {
-  margin: auto;
+  max-width: 90%;
+}
+
+@media (max-width: 768px) {
+  .categoryContainer {
+    max-width: 100%;
+  }
 }
 
 .categoryList {

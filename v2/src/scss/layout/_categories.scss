@@ -1,6 +1,9 @@
 /* Category*/
 .categoryContainer{
-    margin: auto;
+    max-width: 90%;
+    @media (max-width: $screen-md) {
+        max-width: 100%;
+    }
 }
 .categoryList {
     margin: 0;
