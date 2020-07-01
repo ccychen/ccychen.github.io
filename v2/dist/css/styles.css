@@ -5,8 +5,11 @@
  */
 html, body {
   margin: 0;
+  padding: 0;
   min-width: 375px;
+  min-height: 100vh;
   height: 100%;
+  width: 100%;
   color: #505050;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -17,14 +20,24 @@ a {
   text-decoration: none;
 }
 
-.content-block {
-  height: calc(100% - 151px - 30px);
+.content-block-1 {
+  padding: 0px 10px 0px 10px;
 }
 
-@media (max-width: 576px) {
-  .content-block {
-    height: calc(100% - 70px - 30px);
-  }
+.bg-color-serial {
+  background-color: #e4714c;
+}
+
+.bg-color-paintings {
+  background-color: #f0456f;
+}
+
+.bg-color-sketchbook {
+  background-color: #75b7ab;
+}
+
+.spacer {
+  height: 30px;
 }
 
 /* Mobile Menu */
@@ -169,6 +182,7 @@ header {
 .header-ruler {
   margin: 0px;
   height: 2px;
+  width: 100%;
   background-color: #505050;
   border: none;
 }
@@ -180,9 +194,7 @@ header {
 }
 
 footer {
-  position: sticky;
-  position: -webkit-sticky;
-  /* Safari */
+  position: fixed;
   bottom: 0px;
   width: 100%;
   height: 30px;
@@ -255,12 +267,80 @@ footer .mini-copyright {
   }
 }
 
-.owl-carousel {
-  height: 100%;
+/* Category*/
+.categoryContainer {
+  padding: 10px;
+  margin: auto;
+}
+
+.categoryList {
+  margin: 0;
+  padding: 5px;
+}
+
+.categoryList .caption {
+  height: 25px;
+}
+
+.categoryList .caption hr {
+  position: relative;
+  height: 0px;
+  border-top: 2px dashed darkgray;
+  top: -5px;
+}
+
+.categoryList .caption span {
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+.categoryList .items {
+  margin: 0;
+  padding: 0px;
+}
+
+.categoryList .items .categoryItem {
+  cursor: pointer;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.categoryList .items .categoryItem:first-child {
+  padding-right: 5px;
+}
+
+.categoryList .items .categoryItem:last-child {
+  padding-left: 5px;
+}
+
+.categoryList .items .categoryItem A {
+  margin: 0;
+  padding: 0;
+  display: block;
+  border: solid 1px darkgray;
+  text-transform: uppercase;
+}
+
+.categoryList .items .categoryItem A IMG {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
   max-height: 100%;
 }
 
-.owl-stage-outer {
-  height: calc(100% - 50px);
-  max-height: calc(100% - 50px);
+.categoryList .items .categoryItem A SPAN {
+  display: inline-block;
+  border-top: solid 1px darkgray;
+  color: #505050;
+  font-weight: bold;
+  padding: 5px;
+  width: 100%;
+  height: 60px;
+  font-size: 1em;
 }

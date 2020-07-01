@@ -1,0 +1,6 @@
+mixin category-item(caption, imgUrl, url)
+    div.categoryItem.col-6
+        a(href=url)
+            img(src=imgUrl)
+            span
+                | #{caption}

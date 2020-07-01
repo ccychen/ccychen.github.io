@@ -3,8 +3,11 @@
 // --------------------------------------------------
 html, body {
   margin: 0;
+  padding: 0;
   min-width: 375px;
+  min-height: 100vh;
   height: 100%;
+  width: 100%;
  
   color: $body-color;
   font: {
@@ -19,9 +22,20 @@ a {
   text-decoration: none;
 }
 
-.content-block{
-  height: calc(100% - 151px - 30px);
-  @media (max-width: $screen-sm) {
-    height: calc(100% - 70px - 30px);
-  }
+.content-block-1{
+  padding: 0px 10px 0px 10px;
+}
+
+.bg-color-serial{
+  background-color: $cate-serial;
+}
+.bg-color-paintings{
+  background-color: $cate-paintings;
+}
+.bg-color-sketchbook{
+  background-color: $cate-sketchbook;
+}
+
+.spacer{
+  height: 30px;
 }

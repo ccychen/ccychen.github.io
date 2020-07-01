@@ -1,0 +1,39 @@
+include ../components/category
+
+div.container.categoryContainer1
+    div.row
+        div.categoryList.container.col-12.col-md-6
+                div.caption.row
+                    div.col-4
+                        hr
+                    span.col-4.bg-color-serial
+                        | SERIAL
+                    div.col-4
+                        hr
+                div.items.row
+                    +category-item("movie comic","/img/cover/serial/moviecomic.png","#")
+                    +category-item("Green Juice","/img/cover/serial/green_juice.jpg","#")
+
+        div.categoryList.container.col-12.col-md-6
+                div.caption.row
+                    div.col-4
+                        hr
+                    span.col-4.bg-color-sketchbook
+                        | SKETCHBOOK
+                    div.col-4
+                        hr
+                div.items.row
+                    +category-item("Salon des vin","/img/cover/sketchbook/salon_des_vin.jpg","#")
+                    +category-item("travel in France","/img/cover/sketchbook/travel_in_france.png","#")
+
+        div.categoryList.container.col-12.col-md-6
+                div.caption.row
+                    div.col-4
+                        hr
+                    span.col-4.bg-color-paintings
+                        | PAINTINGS
+                    div.col-4
+                        hr
+                div.items.row
+                    +category-item("Basal Market","/img/cover/painting/basalmarket.jpg","#")
+                    +category-item("My Room","/img/cover/painting/myroom.jpg","#")

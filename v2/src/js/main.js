@@ -1,11 +1,3 @@
-function adjSlider() {
-    if ($(window).width() > 854) {
-        $('.owl-carousel').show()
-    } else {
-        $('.owl-carousel').hide();
-    }
-}
-
 $(function () {
     $(".mobile-nav-toggle").click(function () {
         if ($("#mobile-nav").hasClass("active")) {
@@ -25,8 +17,17 @@ $(function () {
         margin: 10,
         loop: true,
         nav:false,
-        dots:true,
-        autoWidth:true
+        dots:false,
+        responsive:{
+            0:{
+                items:1
+            },
+            768:{
+                items:2
+            },
+            1920:{
+                items:3
+            }
+        }
     });
-    adjSlider();
 });
