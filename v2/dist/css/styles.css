@@ -6,8 +6,8 @@
 html, body {
   margin: 0;
   padding: 0;
-  min-width: 375px;
-  min-height: 100vh;
+  left: 0;
+  min-width: 350px;
   height: 100%;
   width: 100%;
   color: #505050;
@@ -269,24 +269,41 @@ footer .mini-copyright {
 
 /* Category*/
 .categoryContainer {
-  padding: 10px;
   margin: auto;
 }
 
 .categoryList {
   margin: 0;
-  padding: 5px;
+  padding: 10px 5px;
 }
 
 .categoryList .caption {
+  margin: 0;
+  padding: 0px;
   height: 25px;
+  width: 100%;
+}
+
+.categoryList .caption div {
+  padding: 0;
+  margin: 0;
+}
+
+.categoryList .caption div:first-child {
+  padding-right: 10px;
+}
+
+.categoryList .caption div:last-child {
+  padding-left: 1em;
 }
 
 .categoryList .caption hr {
+  padding: 0;
+  margin: 0;
   position: relative;
   height: 0px;
   border-top: 2px dashed darkgray;
-  top: -5px;
+  top: 10px;
 }
 
 .categoryList .caption span {

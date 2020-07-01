@@ -10,7 +10,6 @@ $(function () {
 
     $(window).resize(function () {
         $("#mobile-nav").removeClass("active");
-        adjSlider();
     });
 
     $('.owl-carousel').owlCarousel({
