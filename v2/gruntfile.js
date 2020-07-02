@@ -83,7 +83,7 @@ module.exports =  function (grunt) {
         },
         files: [{
           cwd: '<%= paths.src_pug %>',
-          src: ['*.pug', 'components/*.pug', 'docs/*.pug'],
+          src: ['*.pug', 'docs/*.pug'],
           dest: '<%= paths.dist %>',
           expand: true,
           ext: '.html'

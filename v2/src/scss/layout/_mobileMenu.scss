@@ -1,8 +1,8 @@
 /* Mobile Menu */
 .mobile-nav-toggle{
     position: absolute;
-    top:15px;
-    right: 10px;
+    top:1.5em;
+    right: 1em;
     z-index: 999;
     display: none;
     & i{
@@ -24,11 +24,11 @@
     display: none;
     overflow: hidden;
     position: absolute;
-    left: 0px;
-    top:70px;
-    bottom: 0px;
+    left: 0;
+    top:7em;
+    bottom: 0;
     width:100%;
-    padding-top: 20px;
+    padding-top: 2em;
     background-color: $mobile-nav-bg;
     -webkit-transition: 0.5s;
     -o-transition: 0.5s;
@@ -43,29 +43,29 @@
             text-transform: uppercase;  
             font-size: 1em;
             color: black;
-            padding: 15px;
+            padding: 1.5em;
         }
     }
 
     & .contact-block{
         width: 100%;
-        margin:0px;
-        padding: 0px;
+        margin:0;
+        padding: 0;
         position: absolute;
-        bottom: 50px;
+        bottom: 5em;
 
         & > DIV{
-            padding: 0px;
+            padding: 0;
         }
     }
 
     & .contacts{
         width: 100%;
-        margin:0px;
+        margin:0;
         font-size: 2.4em;
 
         & > A{
-            padding:0px;
+            padding:0;
             text-align: center;
         }
     }

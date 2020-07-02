@@ -1,23 +1,23 @@
 /* logo */
 header{
-    padding-top: 10px;
-    height: 150px;
+    padding-top: 1em;
+    height: 15em;
     @media (max-width: $screen-sm) {
-        height: 70px;
+        height: 7em;
     }
 }
 
 .header-logo{
     margin-left: 5%;
-    height:100px;    
+    height:10em;    
     @media (max-width: $screen-sm) {
-        height:60px;
-        margin-left: 10px;
+        height:6em;
+        margin-left: 1em;
     }
 }
 
 .header-nav{
-    margin-top: 5px;
+    margin-top: .5em;
     margin-left: 10%;
     @media (max-width: $screen-sm) {
         display:none;
@@ -25,8 +25,8 @@ header{
 
     & .nav-link{
         display: inline-block;
-        padding: 5px 10px;
-        margin-right: 20px;
+        padding: .5em 1em;
+        margin-right: 2em;
         font-weight: bold;
         color: black;
         text-transform: uppercase;  

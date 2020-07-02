@@ -7,7 +7,7 @@ html, body {
   margin: 0;
   padding: 0;
   left: 0;
-  min-width: 350px;
+  min-width: 300px;
   height: 100%;
   width: 100%;
   color: #505050;
@@ -43,8 +43,8 @@ a {
 /* Mobile Menu */
 .mobile-nav-toggle {
   position: absolute;
-  top: 15px;
-  right: 10px;
+  top: 1.5em;
+  right: 1em;
   z-index: 999;
   display: none;
 }
@@ -65,11 +65,11 @@ a {
   display: none;
   overflow: hidden;
   position: absolute;
-  left: 0px;
-  top: 70px;
-  bottom: 0px;
+  left: 0;
+  top: 7em;
+  bottom: 0;
   width: 100%;
-  padding-top: 20px;
+  padding-top: 2em;
   background-color: #defbf3;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -88,58 +88,58 @@ a {
   text-transform: uppercase;
   font-size: 1em;
   color: black;
-  padding: 15px;
+  padding: 1.5em;
 }
 
 #mobile-nav .contact-block {
   width: 100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   position: absolute;
-  bottom: 50px;
+  bottom: 5em;
 }
 
 #mobile-nav .contact-block > DIV {
-  padding: 0px;
+  padding: 0;
 }
 
 #mobile-nav .contacts {
   width: 100%;
-  margin: 0px;
+  margin: 0;
   font-size: 2.4em;
 }
 
 #mobile-nav .contacts > A {
-  padding: 0px;
+  padding: 0;
   text-align: center;
 }
 
 /* logo */
 header {
-  padding-top: 10px;
-  height: 150px;
+  padding-top: 1em;
+  height: 15em;
 }
 
 @media (max-width: 576px) {
   header {
-    height: 70px;
+    height: 7em;
   }
 }
 
 .header-logo {
   margin-left: 5%;
-  height: 100px;
+  height: 10em;
 }
 
 @media (max-width: 576px) {
   .header-logo {
-    height: 60px;
-    margin-left: 10px;
+    height: 6em;
+    margin-left: 1em;
   }
 }
 
 .header-nav {
-  margin-top: 5px;
+  margin-top: .5em;
   margin-left: 10%;
 }
 
@@ -151,8 +151,8 @@ header {
 
 .header-nav .nav-link {
   display: inline-block;
-  padding: 5px 10px;
-  margin-right: 20px;
+  padding: .5em 1em;
+  margin-right: 2em;
   font-weight: bold;
   color: black;
   text-transform: uppercase;
@@ -197,9 +197,9 @@ footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 30px;
-  line-height: 30px;
-  padding-left: 10px;
+  height: 3em;
+  line-height: 3em;
+  padding-left: 1em;
 }
 
 footer.home {
@@ -234,7 +234,7 @@ footer .contact {
 }
 
 footer .contact A {
-  margin-right: 10px;
+  margin-right: 1em;
   font-size: 1.2em;
 }
 
@@ -242,7 +242,7 @@ footer .copyright {
   float: right;
   vertical-align: middle;
   font-size: 0.9em;
-  padding-right: 10px;
+  padding-right: 1em;
 }
 
 @media (max-width: 576px) {
@@ -267,27 +267,44 @@ footer .mini-copyright {
   }
 }
 
+.owl-carousel {
+  margin-top: 2em;
+}
+
 /* Category*/
 .categoryContainer {
+  margin: 3em auto 0 auto;
   max-width: 90%;
 }
 
 @media (max-width: 768px) {
   .categoryContainer {
-    max-width: 100%;
+    max-width: 95%;
   }
 }
 
 .categoryList {
-  margin: 0;
-  padding: 10px 5px;
+  margin: 1em 0 0 0;
+  padding: 0 0 2em 0;
+}
+
+@media (max-width: 768px) {
+  .categoryList {
+    padding: 1em;
+  }
 }
 
 .categoryList .caption {
-  margin: 0;
-  padding: 0px;
-  height: 25px;
+  margin: 0em 0em 1em 0em;
+  padding: 0 1em;
+  height: 1.6em;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .categoryList .caption {
+    padding: 0 .5em;
+  }
 }
 
 .categoryList .caption div {
@@ -296,7 +313,7 @@ footer .mini-copyright {
 }
 
 .categoryList .caption div:first-child {
-  padding-right: 10px;
+  padding-right: 1em;
 }
 
 .categoryList .caption div:last-child {
@@ -307,45 +324,51 @@ footer .mini-copyright {
   padding: 0;
   margin: 0;
   position: relative;
-  height: 0px;
+  height: 0;
   border-top: 2px dashed darkgray;
-  top: 10px;
+  top: 0.8em;
 }
 
 .categoryList .caption span {
+  padding: 0;
   display: inline-block;
-  height: 20px;
-  line-height: 20px;
+  height: 1.6em;
+  line-height: 1.6em;
   vertical-align: middle;
   text-align: center;
   font-weight: bold;
   color: white;
+  text-transform: uppercase;
 }
 
 .categoryList .items {
-  margin: 0;
+  margin: auto;
   padding: 0px;
 }
 
 .categoryList .items .categoryItem {
   cursor: pointer;
-  width: 100%;
   margin: 0;
-  padding: 0;
+  padding: 1em;
 }
 
-.categoryList .items .categoryItem:first-child {
-  padding-right: 5px;
+@media (max-width: 768px) {
+  .categoryList .items .categoryItem {
+    padding: .5em;
+  }
 }
 
-.categoryList .items .categoryItem:last-child {
-  padding-left: 5px;
+@media (max-width: 340px) {
+  .categoryList .items .categoryItem {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
 }
 
 .categoryList .items .categoryItem A {
-  margin: 0;
+  margin: auto;
   padding: 0;
-  display: block;
+  display: inline-block;
   border: solid 1px darkgray;
   text-transform: uppercase;
 }
@@ -361,9 +384,156 @@ footer .mini-copyright {
   display: inline-block;
   border-top: solid 1px darkgray;
   color: #505050;
-  font-weight: bold;
-  padding: 5px;
-  width: 100%;
-  height: 60px;
+  font-weight: normal;
+  padding: 0.5em;
   font-size: 1em;
+  font-weight: 600;
+  width: 100%;
+  height: 4em;
+}
+
+@media (max-width: 768px) {
+  .categoryList .items .categoryItem A SPAN {
+    height: 3em;
+    font-size: .8em;
+  }
+}
+
+/*for folder*/
+.categoryList.folder {
+  margin: 3em auto;
+  padding: auto;
+}
+
+.categoryList.folder .caption {
+  margin: 0;
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .categoryList.folder .caption {
+    display: flex;
+  }
+}
+
+.categoryList.folder .categoryItem {
+  padding: 2em 1.5em;
+}
+
+@media (max-width: 768px) {
+  .categoryList.folder .categoryItem {
+    padding: 1.2em .8em;
+  }
+}
+
+.drawingList {
+  margin: 3em auto;
+  padding: auto;
+}
+
+@media (max-width: 768px) {
+  .drawingList {
+    padding: 1em;
+  }
+}
+
+.drawingList .caption {
+  margin: 0;
+  display: none;
+  padding: 0 1em;
+  height: 1.6em;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .drawingList .caption {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .drawingList .caption {
+    padding: 0 .5em;
+  }
+}
+
+.drawingList .caption div {
+  padding: 0;
+  margin: 0;
+}
+
+.drawingList .caption div:first-child {
+  padding-right: 1em;
+}
+
+.drawingList .caption div:last-child {
+  padding-left: 1em;
+}
+
+.drawingList .caption hr {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 0;
+  border-top: 2px dashed darkgray;
+  top: 0.8em;
+}
+
+.drawingList .caption span {
+  padding: 0;
+  display: inline-block;
+  height: 1.6em;
+  line-height: 1.6em;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.drawingList .items {
+  margin: 0;
+  padding: 0px;
+}
+
+.drawingList .items .drawingItem {
+  cursor: pointer;
+  margin: 0;
+  padding: 2em 2.4em;
+}
+
+@media (max-width: 768px) {
+  .drawingList .items .drawingItem {
+    padding: 1.2em .8em;
+  }
+}
+
+.drawingList .items .drawingItem A {
+  margin: auto;
+  padding: 0;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.drawingList .items .drawingItem A IMG {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.drawingList .items .drawingItem A SPAN {
+  display: inline-block;
+  color: #505050;
+  font-weight: normal;
+  padding: 0.5em 0;
+  font-size: 1em;
+  font-weight: 600;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .drawingList .items .drawingItem A SPAN {
+    font-size: .8em;
+  }
 }

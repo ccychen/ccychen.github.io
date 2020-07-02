@@ -1,0 +1,96 @@
+.drawingList {
+    margin: 3em auto;
+    padding: auto;
+    @media (max-width: $screen-md) {
+        padding: 1em;
+    }
+    .caption{
+        margin: 0;
+        display: none;
+        @media (max-width: $screen-sm) {
+            display: flex;
+        }
+        padding: 0 1em;
+        @media (max-width: $screen-md) {
+            padding: 0 .5em;
+        }
+
+        height: 1.6em;
+        width:100%;
+
+        div{
+            padding: 0;
+            margin: 0;
+        }
+        div:first-child{
+            padding-right:1em;
+        }
+        div:last-child{
+            padding-left:1em;
+        }
+
+        hr{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            height: 0;
+            border-top: 2px dashed darkgray;
+            top:0.8em;
+        }
+
+        span{
+            padding: 0;
+            display: inline-block;
+            height: 1.6em;
+            line-height: 1.6em;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase
+        }
+    }
+
+    
+    .items{
+        margin: 0;
+        padding: 0px;
+        
+        .drawingItem{
+            cursor: pointer;
+            margin: 0;
+            padding: 2em 2.4em;
+            
+            @media (max-width: $screen-md) {
+                padding: 1.2em .8em;
+            }
+
+            A{
+                margin: auto;
+                padding: 0;
+                display: inline-block;
+                text-transform: uppercase;
+
+                IMG{
+                    width: 100%;
+                    height: auto;
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+        
+                SPAN{
+                    display: inline-block;
+                    color: $body-color;
+                    font-weight:normal;
+                    padding: 0.5em 0;
+                    font-size: 1em;
+                    font-weight: 600;
+                    width: 100%;
+                    @media (max-width: $screen-md) {
+                        font-size: .8em;
+                    }
+                }
+            }
+        }
+    }
+}

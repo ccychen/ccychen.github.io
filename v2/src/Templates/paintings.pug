@@ -7,3 +7,17 @@ append config
 
 //- Page Content
 block content
+    div.container.drawingList
+        div.caption.row
+            div.col-4
+                hr
+            span.col-4.bg-color-paintings
+                | paintings
+            div.col-4
+                hr
+        div.row.items
+            +drawing-item("basal market","img/cover/painting/basalmarket.jpg","serial/basal-market.html")
+            +drawing-item("my room","img/cover/painting/myroom.jpg","serial/my-room.html")
+            +drawing-item("papua","img/cover/painting/papua.jpg","serial/papua.html")
+            +drawing-item("p-m","img/cover/painting/p-m.jpg","serial/p-m.html")
+            +drawing-item("salagou","img/cover/painting/salagou.jpg","serial/salagou.html")
