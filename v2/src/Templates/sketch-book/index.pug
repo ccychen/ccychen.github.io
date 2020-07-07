@@ -4,6 +4,7 @@ extends ../partials/layout
 append config
     - var pageTitle = 'Sketch Book - CCY CHEN'
     - var pageCate = 'sketchbook'
+    - var root = "../"
 
 //- Page Content
 block content
@@ -16,10 +17,10 @@ block content
             div.col-4
                 hr
         div.row.items
-            +folder-item("ink & pencil","../../img/cover/sketchbook/ink.png","ink.html")
-            +folder-item("LITTLE protraits","../../img/cover/sketchbook/LITTLE_protraits.png","little-protraits.html")
-            +folder-item("Salon des vin","../../img/cover/sketchbook/Salon_des_vin.jpg","salon-des-vin.html")
-            +folder-item("Sketch CG","../../img/cover/sketchbook/Sketch_CG.png","sketch-cg.html")
-            +folder-item("sai","../../img/cover/sketchbook/sketchbook_SAI.png","sketch-sai.html")
-            +folder-item("small color piece","../../img/cover/sketchbook/smallcolorpiece.png","small-color-piece.html")
-            +folder-item("travel in France","../../img/cover/sketchbook/travel_in_France.png","travel-in-france.html")
+            +folder-item("ink & pencil",root + "img/cover/sketchbook/ink.png","ink.html")
+            +folder-item("LITTLE protraits",root + "img/cover/sketchbook/LITTLE_protraits.png","little-protraits.html")
+            +folder-item("Salon des vin",root + "img/cover/sketchbook/Salon_des_vin.jpg","salon-des-vin.html")
+            +folder-item("Sketch CG",root + "img/cover/sketchbook/Sketch_CG.png","sketch-cg.html")
+            +folder-item("sai",root + "img/cover/sketchbook/sketchbook_SAI.png","sketch-sai.html")
+            +folder-item("small color piece",root + "img/cover/sketchbook/smallcolorpiece.png","small-color-piece.html")
+            +folder-item("travel in France",root + "img/cover/sketchbook/travel_in_France.png","travel-in-france.html")
