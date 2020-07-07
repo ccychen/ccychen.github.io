@@ -4,34 +4,34 @@ block config
 
 header
   a(href='/')
-    img.header-logo(src='/img/LOGO.png')
+    img.header-logo(src='/v2/dist/img/LOGO.png')
  
   // navigator
   nav.header-nav
     if pageCate != "home"
       a.nav-link.home(href='index.html') Home
     else
-      a.nav-link.home(href='index.html').active Home
+      a.nav-link.home(href='/v2/dist').active Home
     
     if pageCate != "serial"
-      a.nav-link.serial(href='/serial') Serial
+      a.nav-link.serial(href='/v2/dist/serial') Serial
     else
-      a.nav-link.serial(href='/serial').active Serial
+      a.nav-link.serial(href='/v2/dist/serial').active Serial
     
     if pageCate != "sketchbook"
-      a.nav-link.sketchbook(href='/sketch-book') Sketch Book
+      a.nav-link.sketchbook(href='/v2/dist/sketch-book') Sketch Book
     else
-      a.nav-link.sketchbook(href='/sketch-book').active Sketch Book
+      a.nav-link.sketchbook(href='/v2/dist/sketch-book').active Sketch Book
 
 
     if pageCate != "paintings"
-      a.nav-link.paintings(href='/paintings') Paintings
+      a.nav-link.paintings(href='/v2/dist/paintings') Paintings
     else
-      a.nav-link.paintings(href='/paintings').active Paintings
+      a.nav-link.paintings(href='/v2/dist/paintings').active Paintings
 
 
     if pageCate != "about"
-      a.nav-link.about(href='/about.html') About
+      a.nav-link.about(href='/v2/dist/about.html') About
     else
       div.nav-link.about.active About
 
