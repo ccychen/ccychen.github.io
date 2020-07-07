@@ -1,0 +1,11 @@
+.about-photo{
+    max-width: 90%;
+    width: 400px;
+}
+
+.about-container{
+    margin-top: 3em;
+    &>div>div{
+        padding: 3em;
+    }
+}

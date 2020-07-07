@@ -3,35 +3,35 @@ block config
   include ../helpers/config
 
 header
-  a(href='index.html')
-    img.header-logo(src='img/LOGO.png')
+  a(href='/')
+    img.header-logo(src='/img/LOGO.png')
  
   // navigator
   nav.header-nav
     if pageCate != "home"
       a.nav-link.home(href='index.html') Home
     else
-      div.nav-link.home.active Home
+      a.nav-link.home(href='index.html').active Home
     
     if pageCate != "serial"
-      a.nav-link.serial(href='serial.html') Serial
+      a.nav-link.serial(href='/serial') Serial
     else
-      div.nav-link.serial.active Serial
+      a.nav-link.serial(href='/serial').active Serial
     
     if pageCate != "sketchbook"
-      a.nav-link.sketchbook(href='sketch-book.html') Sketch Book
+      a.nav-link.sketchbook(href='/sketch-book') Sketch Book
     else
-      div.nav-link.sketchbook.active Sketch Book
+      a.nav-link.sketchbook(href='/sketch-book').active Sketch Book
 
 
     if pageCate != "paintings"
-      a.nav-link.paintings(href='paintings.html') Paintings
+      a.nav-link.paintings(href='/paintings') Paintings
     else
-      div.nav-link.paintings.active Paintings
+      a.nav-link.paintings(href='/paintings').active Paintings
 
 
     if pageCate != "about"
-      a.nav-link.about(href='about.html') About
+      a.nav-link.about(href='/about.html') About
     else
       div.nav-link.about.active About
 

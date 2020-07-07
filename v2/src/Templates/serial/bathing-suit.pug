@@ -1,0 +1,13 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+    - var pageTitle = 'Serial - Bathing Suit - CCY CHEN'
+    - var pageCate = 'serial'
+
+//- Page Content
+block content
+    div.container.drawingList
+        div.row.items
+            +drawing-item("1y1","/works/serial/bathing-suit/1y1-f.jpg","1y1.html")
+            +drawing-item("2y","/works/serial/bathing-suit/2y-f.jpg","#")

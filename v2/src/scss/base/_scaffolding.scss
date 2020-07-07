@@ -20,11 +20,12 @@ html, body {
 // Links
 a {
   text-decoration: none;
+  color: $body-color;
+  &:hover{
+    color: $body-color;
+  }
 }
 
-.content-block-1{
-  padding: 0px 10px 0px 10px;
-}
 
 .bg-color-serial{
   background-color: $cate-serial;
@@ -37,5 +38,5 @@ a {
 }
 
 .spacer{
-  height: 30px;
+  height: 2em;
 }

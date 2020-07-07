@@ -18,10 +18,11 @@ html, body {
 
 a {
   text-decoration: none;
+  color: #505050;
 }
 
-.content-block-1 {
-  padding: 0px 10px 0px 10px;
+a:hover {
+  color: #505050;
 }
 
 .bg-color-serial {
@@ -37,7 +38,7 @@ a {
 }
 
 .spacer {
-  height: 30px;
+  height: 2em;
 }
 
 /* Mobile Menu */
@@ -128,12 +129,12 @@ header {
 
 .header-logo {
   margin-left: 5%;
-  height: 10em;
+  height: 7em;
 }
 
 @media (max-width: 576px) {
   .header-logo {
-    height: 6em;
+    height: 5em;
     margin-left: 1em;
   }
 }
@@ -271,10 +272,22 @@ footer .mini-copyright {
   margin-top: 2em;
 }
 
+@media (max-width: 576px) {
+  .owl-carousel {
+    margin-top: 0;
+  }
+}
+
 /* Category*/
 .categoryContainer {
   margin: 3em auto 0 auto;
   max-width: 90%;
+}
+
+@media (max-width: 576px) {
+  .categoryContainer {
+    margin: 0.5em auto 0 auto;
+  }
 }
 
 @media (max-width: 768px) {
@@ -445,6 +458,10 @@ footer .mini-copyright {
   width: 100%;
 }
 
+.drawingList .caption.show {
+  display: flex !important;
+}
+
 @media (max-width: 576px) {
   .drawingList .caption {
     display: flex;
@@ -536,4 +553,21 @@ footer .mini-copyright {
   .drawingList .items .drawingItem A SPAN {
     font-size: .8em;
   }
+}
+
+.about-photo {
+  max-width: 90%;
+  width: 400px;
+}
+
+.about-container {
+  margin-top: 3em;
+}
+
+.about-container > div > div {
+  padding: 3em;
+}
+
+.single IMG {
+  max-width: 100%;
 }

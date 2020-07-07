@@ -1,0 +1,25 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+    - var pageTitle = 'Sketch Book - CCY CHEN'
+    - var pageCate = 'sketchbook'
+
+//- Page Content
+block content
+    div.container.categoryList.folder
+        div.caption.row
+            div.col-4
+                hr
+            span.col-4.bg-color-sketchbook
+                | sketch book
+            div.col-4
+                hr
+        div.row.items
+            +folder-item("ink & pencil","../../img/cover/sketchbook/ink.png","ink.html")
+            +folder-item("LITTLE protraits","../../img/cover/sketchbook/LITTLE_protraits.png","little-protraits.html")
+            +folder-item("Salon des vin","../../img/cover/sketchbook/Salon_des_vin.jpg","salon-des-vin.html")
+            +folder-item("Sketch CG","../../img/cover/sketchbook/Sketch_CG.png","sketch-cg.html")
+            +folder-item("sai","../../img/cover/sketchbook/sketchbook_SAI.png","sketch-sai.html")
+            +folder-item("small color piece","../../img/cover/sketchbook/smallcolorpiece.png","small-color-piece.html")
+            +folder-item("travel in France","../../img/cover/sketchbook/travel_in_France.png","travel-in-france.html")

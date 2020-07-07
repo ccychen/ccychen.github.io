@@ -7,6 +7,9 @@
     .caption{
         margin: 0;
         display: none;
+        &.show{
+            display: flex!important;
+        }
         @media (max-width: $screen-sm) {
             display: flex;
         }

@@ -12,21 +12,23 @@ $(function () {
         $("#mobile-nav").removeClass("active");
     });
 
-    $('.owl-carousel').owlCarousel({
-        margin: 10,
-        loop: true,
-        nav:false,
-        dots:false,
-        responsive:{
-            0:{
-                items:1
-            },
-            768:{
-                items:2
-            },
-            1920:{
-                items:3
+    if($('.owl-carousel').length){
+        $('.owl-carousel').owlCarousel({
+            margin: 10,
+            loop: true,
+            nav:false,
+            dots:false,
+            responsive:{
+                0:{
+                    items:1
+                },
+                768:{
+                    items:2
+                },
+                1920:{
+                    items:3
+                }
             }
-        }
-    });
+        });
+    }
 });
