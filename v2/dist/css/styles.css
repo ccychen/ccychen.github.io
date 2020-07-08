@@ -568,6 +568,61 @@ footer .mini-copyright {
   padding: 3em;
 }
 
+.about-container .caption {
+  display: none;
+  margin: 0em 0em 1em 0em;
+  padding: 0 1em;
+  height: 1.6em;
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  .about-container .caption {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-container .caption {
+    padding: 0 .5em;
+  }
+}
+
+.about-container .caption div {
+  padding: 0;
+  margin: 0;
+}
+
+.about-container .caption div:first-child {
+  padding-right: 1em;
+}
+
+.about-container .caption div:last-child {
+  padding-left: 1em;
+}
+
+.about-container .caption hr {
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 0;
+  border-top: 2px dashed darkgray;
+  top: 0.8em;
+}
+
+.about-container .caption span {
+  padding: 0;
+  display: inline-block;
+  height: 1.6em;
+  line-height: 1.6em;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  background-color: #d7c928;
+}
+
 .single IMG {
   max-width: 100%;
 }

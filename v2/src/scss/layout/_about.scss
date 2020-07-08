@@ -8,4 +8,52 @@
     &>div>div{
         padding: 3em;
     }
+
+    .caption{
+        display: none;
+        @media (max-width: $screen-sm) {
+            display: flex;
+        }
+        margin: 0em 0em 1em 0em;
+        padding: 0 1em;
+        @media (max-width: $screen-md) {
+            padding: 0 .5em;
+        }
+
+        height: 1.6em;
+        width:100%;
+
+        div{
+            padding: 0;
+            margin: 0;
+        }
+        div:first-child{
+            padding-right:1em;
+        }
+        div:last-child{
+            padding-left:1em;
+        }
+
+        hr{
+            padding: 0;
+            margin: 0;
+            position: relative;
+            height: 0;
+            border-top: 2px dashed darkgray;
+            top:0.8em;
+        }
+
+        span{
+            padding: 0;
+            display: inline-block;
+            height: 1.6em;
+            line-height: 1.6em;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+            text-transform: uppercase;
+            background-color: $cate-about;
+        }
+    }
 }
