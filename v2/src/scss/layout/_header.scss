@@ -1,30 +1,32 @@
 /* logo */
 header{
-    padding-top: 1em;
-    height: 15em;
+    width: 100%;
+    margin:0!important;
+    padding: 1em 5em 2em 5em;
     @media (max-width: $screen-sm) {
-        height: 7em;
+        padding-left:0em;
     }
+    vertical-align:middle;
 }
 
-.header-logo{
-    margin-left: 5%;
-    height:7em;    
+.header-logo{  
     @media (max-width: $screen-sm) {
         height:5em;
-        margin-left: 1em;
     }
 }
 
 .header-nav{
-    margin-top: .5em;
-    margin-left: 10%;
+    text-align: center;
     @media (max-width: $screen-sm) {
         display:none;
     }
 
+
+    margin:auto;
+
     & .nav-link{
         display: inline-block;
+        
         padding: .5em 1em;
         margin-right: 2em;
         font-weight: bold;

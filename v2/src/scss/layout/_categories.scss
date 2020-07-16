@@ -1,6 +1,6 @@
 /* Category*/
 .categoryContainer{
-    margin: 3em auto 0 auto;
+    margin: 0em auto 0 auto;
     @media (max-width: $screen-sm) {
         margin: 0.5em auto 0 auto;
     }
@@ -10,13 +10,14 @@
     }
 }
 .categoryList {
-    margin: 1em 0 0 0;
-    padding: 0 0 2em 0;
+    margin: 0 0 2em 0;
+    padding: 0;
     @media (max-width: $screen-md) {
+        margin: 0 0 .5em 0;
         padding: 1em;
     }
     .caption{
-        margin: 0em 0em 1em 0em;
+        margin: 0em 0em .5em 0em;
         padding: 0 1em;
         @media (max-width: $screen-md) {
             padding: 0 .5em;
@@ -30,19 +31,22 @@
             margin: 0;
         }
         div:first-child{
-            padding-right:1em;
+            padding-right:.1em;
         }
         div:last-child{
-            padding-left:1em;
+            padding-left:.1em;
         }
 
-        hr{
-            padding: 0;
-            margin: 0;
-            position: relative;
+        .dottedline{
+            padding:0;
+            margin:0;
             height: 0;
-            border-top: 2px dashed darkgray;
-            top:0.8em;
+            top:50%;
+            width: 100%;
+            height:100%;
+            background-clip: content-box;
+            background-repeat: repeat-x;
+            background-image: url("../img/dottedline_3.png");
         }
 
         span{
@@ -54,7 +58,14 @@
             text-align: center;
             font-weight: bold;
             color: white;
-            text-transform: uppercase;
+            text-transform: capitalize;
+            @media (max-width: $screen-sm) {
+                font-size: 1.2em;
+                font-weight: normal;
+                font-style: italic;
+                background-color: inherit;
+                color: inherit;
+            }
         }
     }
 
@@ -80,7 +91,7 @@
                 padding: 0;
                 display: inline-block;
                 border: solid 1px darkgray;
-                text-transform: uppercase;     
+                text-transform: capitalize;     
 
                 IMG{
                     width: 100%;

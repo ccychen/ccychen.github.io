@@ -38,7 +38,7 @@ a:hover {
 }
 
 .spacer {
-  height: 2em;
+  height: 6em;
 }
 
 /* Mobile Menu */
@@ -117,31 +117,27 @@ a:hover {
 
 /* logo */
 header {
-  padding-top: 1em;
-  height: 15em;
+  width: 100%;
+  margin: 0 !important;
+  padding: 1em 5em 2em 5em;
+  vertical-align: middle;
 }
 
 @media (max-width: 576px) {
   header {
-    height: 7em;
+    padding-left: 0em;
   }
-}
-
-.header-logo {
-  margin-left: 5%;
-  height: 7em;
 }
 
 @media (max-width: 576px) {
   .header-logo {
     height: 5em;
-    margin-left: 1em;
   }
 }
 
 .header-nav {
-  margin-top: .5em;
-  margin-left: 10%;
+  text-align: center;
+  margin: auto;
 }
 
 @media (max-width: 576px) {
@@ -270,6 +266,7 @@ footer .mini-copyright {
 
 .owl-carousel {
   margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 @media (max-width: 576px) {
@@ -278,9 +275,13 @@ footer .mini-copyright {
   }
 }
 
+.owl-carousel .owl-item {
+  margin-right: 0 !important;
+}
+
 /* Category*/
 .categoryContainer {
-  margin: 3em auto 0 auto;
+  margin: 0em auto 0 auto;
   max-width: 90%;
 }
 
@@ -297,18 +298,19 @@ footer .mini-copyright {
 }
 
 .categoryList {
-  margin: 1em 0 0 0;
-  padding: 0 0 2em 0;
+  margin: 0 0 2em 0;
+  padding: 0;
 }
 
 @media (max-width: 768px) {
   .categoryList {
+    margin: 0 0 .5em 0;
     padding: 1em;
   }
 }
 
 .categoryList .caption {
-  margin: 0em 0em 1em 0em;
+  margin: 0em 0em .5em 0em;
   padding: 0 1em;
   height: 1.6em;
   width: 100%;
@@ -326,20 +328,23 @@ footer .mini-copyright {
 }
 
 .categoryList .caption div:first-child {
-  padding-right: 1em;
+  padding-right: .1em;
 }
 
 .categoryList .caption div:last-child {
-  padding-left: 1em;
+  padding-left: .1em;
 }
 
-.categoryList .caption hr {
+.categoryList .caption .dottedline {
   padding: 0;
   margin: 0;
-  position: relative;
   height: 0;
-  border-top: 2px dashed darkgray;
-  top: 0.8em;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  background-clip: content-box;
+  background-repeat: repeat-x;
+  background-image: url("../img/dottedline_3.png");
 }
 
 .categoryList .caption span {
@@ -351,7 +356,17 @@ footer .mini-copyright {
   text-align: center;
   font-weight: bold;
   color: white;
-  text-transform: uppercase;
+  text-transform: capitalize;
+}
+
+@media (max-width: 576px) {
+  .categoryList .caption span {
+    font-size: 1.2em;
+    font-weight: normal;
+    font-style: italic;
+    background-color: inherit;
+    color: inherit;
+  }
 }
 
 .categoryList .items {
@@ -383,7 +398,7 @@ footer .mini-copyright {
   padding: 0;
   display: inline-block;
   border: solid 1px darkgray;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .categoryList .items .categoryItem A IMG {
@@ -414,7 +429,7 @@ footer .mini-copyright {
 
 /*for folder*/
 .categoryList.folder {
-  margin: 3em auto;
+  margin: 0em auto;
   padding: auto;
 }
 
@@ -505,7 +520,7 @@ footer .mini-copyright {
   text-align: center;
   font-weight: bold;
   color: white;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .drawingList .items {
@@ -529,7 +544,7 @@ footer .mini-copyright {
   margin: auto;
   padding: 0;
   display: inline-block;
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .drawingList .items .drawingItem A IMG {
