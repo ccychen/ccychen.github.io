@@ -9,20 +9,18 @@ header{
     vertical-align:middle;
 }
 
-.header-logo{  
+.header-logo{
     @media (max-width: $screen-sm) {
         height:5em;
     }
 }
 
 .header-nav{
-    text-align: center;
+    display: inline-block;
+    margin-left: 2em;
     @media (max-width: $screen-sm) {
         display:none;
     }
-
-
-    margin:auto;
 
     & .nav-link{
         display: inline-block;

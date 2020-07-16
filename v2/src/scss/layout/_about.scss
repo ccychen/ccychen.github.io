@@ -2,6 +2,14 @@
     max-width: 90%;
     width: 400px;
 }
+.about-bg-img{
+    position: absolute;
+    right: 5em;
+    height: 250px;
+    width:365px;
+    background-repeat: no-repeat;
+    background-image: url("../img/about-bg.png");
+}
 
 .about-container{
     margin-top: 3em;
