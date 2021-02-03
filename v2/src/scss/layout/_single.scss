@@ -1,5 +1,49 @@
 .single{
-    & IMG{
-        max-width: 100%;
+    width: 100%;
+    & .chapter{
+        &:first-child{
+            margin-top: 10px;
+        }
+        &:nth-child(n+2){
+            margin-top: 30px;
+        }
+        
+        width: 100%;
+        & .title{
+            color: $slogan-text;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        & .pic{
+            margin: 5px auto;
+            & .slogan{
+                color: $slogan-text;
+                font-size: 1em;
+            }
+            &.banner{
+                img{
+                    height: 400px;
+                    object-fit: cover;                                        
+                }
+            }
+            &.typeA{
+                width: 70%;
+            }
+            & img{
+                width: 100%;                
+            } 
+            & UL.tags{
+                list-style-type: none;
+                margin: 3px 0px;
+                padding: 0;
+                display: block;
+                li{
+                    &:nth-child(n+2){
+                        margin-left: 5px;
+                    }    
+                    display: inline;
+                }
+            } 
+        }
     }
 }

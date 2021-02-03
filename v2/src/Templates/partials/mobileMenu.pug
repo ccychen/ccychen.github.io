@@ -1,7 +1,14 @@
 // START mobile navi
-a.mobile-nav-toggle(href='#')
-    i.fas.fa-bars
-
+div.head-mobile-nav
+    if showLangSelector
+        a.langSelector(data-lang="en").selected EN
+        ||
+        a.langSelector(data-lang="cn") CN
+        ||
+        a.langSelector(data-lang="fr") FR
+    a.mobile-nav-toggle(href='#')
+        i.fas.fa-bars
+    
 div#mobile-nav
     div.nav-links
         a(href=root+'/v2/dist') Home

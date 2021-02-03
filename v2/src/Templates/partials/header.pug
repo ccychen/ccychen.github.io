@@ -34,3 +34,11 @@ header
       a.nav-link.about(href=root + 'about.html') About
     else
       div.nav-link.about.active About
+    
+    if showLangSelector
+      a.nav-link.langSelector(data-lang="en").selected EN
+      ||
+      a.nav-link.langSelector(data-lang="cn") CN
+      ||
+      a.nav-link.langSelector(data-lang="fr") FR
+  

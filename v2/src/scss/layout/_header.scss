@@ -24,7 +24,6 @@ header{
 
     & .nav-link{
         display: inline-block;
-        
         padding: .5em 1em;
         margin-right: 2em;
         font-weight: bold;
@@ -56,7 +55,15 @@ header{
                 background-color: $cate-about;
             }
         }
-    }    
+        &.langSelector{
+            &.selected{
+                font-weight: bold;
+            }
+            font-weight:normal;
+            padding: 0.2em;
+            margin-right: 0em;      
+        }
+    }
 }
 
 .header-ruler{

@@ -1,18 +1,32 @@
 /* Mobile Menu */
-.mobile-nav-toggle{
+.head-mobile-nav{
     position: absolute;
     top:1.5em;
     right: 1em;
     z-index: 999;
     display: none;
-    & i{
-        color: $body-color;
-        font-size: 2em;
+    vertical-align:top;
+    & .langSelector{
+        font-size: 1.2em;
+        position: relative;
+        &.selected{
+            font-weight: bold;
+        }
+        font-weight:normal;
+        padding: 0.2em;
     }
 
     @media (max-width: $screen-sm) {
         display: block;
     }
+}
+
+.mobile-nav-toggle{  
+    & i{
+        color: $body-color;
+        font-size: 2em;
+    }
+    margin-left: 1em;
 }
 
 #mobile-nav{
