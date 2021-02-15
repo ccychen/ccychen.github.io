@@ -2,6 +2,7 @@ function changeLanguage(lang) {
     $('[class*= lang-]').hide();
     $('[class*= lang-' + lang + ']').show();
 }
+
 $(function () {
     $(".mobile-nav-toggle").click(function () {
         if ($("#mobile-nav").hasClass("active")) {
@@ -46,4 +47,26 @@ $(function () {
     });
 
     changeLanguage("en");
+
+    swiper = new Swiper('.swiper-container', {
+        // Optional parameters
+        loop: false
+      
+        // // If we need pagination
+        // pagination: {
+        //   el: '.swiper-pagination',
+        // },
+      
+        // // Navigation arrows
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
+      
+        // // And if we need scrollbar
+        // scrollbar: {
+        //   el: '.swiper-scrollbar',
+        // },
+    });
+    
 });

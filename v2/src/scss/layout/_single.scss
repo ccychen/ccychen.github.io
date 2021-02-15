@@ -1,5 +1,4 @@
 .single{
-    width: 100%;
     & .chapter{
         &:first-child{
             margin-top: 10px;
@@ -10,23 +9,32 @@
         
         width: 100%;
         & .title{
-            color: $slogan-text;
+            color: $gray-dark;
             font-weight: bold;
             font-size: 1.5em;
         }
         & .pic{
             margin: 5px auto;
             & .slogan{
-                color: $slogan-text;
-                font-size: 1em;
+                text-align: center;
+                color: $gray-dark;
+                font-size: 1.5em;
             }
             &.banner{
                 img{
                     height: 400px;
                     object-fit: cover;                                        
                 }
+                & .date{
+                    color: $gray-dark;
+                    font-size: 1.2em;
+                    font-style: italic;
+                }
             }
             &.typeA{
+                @media (max-width: $screen-sm) {
+                    width:100%;
+                }    
                 width: 70%;
             }
             & img{
@@ -45,5 +53,21 @@
                 }
             } 
         }
+
+        & .text{
+            width:80%;            
+            margin: auto;
+            
+            @media (max-width: $screen-sm) {
+                width:100%;
+            }
+        }
     }
 }
+
+.swiper-container {
+    width: 95%;
+    max-height: 800px;
+}
+
+.swiper-slide-active{z-index:999}

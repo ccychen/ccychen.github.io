@@ -5,6 +5,7 @@ footer{
     height: 3em;
     line-height: 3em;
     padding-left: 1em;
+    z-index: 999;
         
     &.home{
         background-color: $cate-home;

@@ -223,6 +223,7 @@ footer {
   height: 3em;
   line-height: 3em;
   padding-left: 1em;
+  z-index: 999;
 }
 
 footer.home {
@@ -673,10 +674,6 @@ footer .mini-copyright {
   background-color: #d7c928;
 }
 
-.single {
-  width: 100%;
-}
-
 .single .chapter {
   width: 100%;
 }
@@ -690,7 +687,7 @@ footer .mini-copyright {
 }
 
 .single .chapter .title {
-  color: #4d4f51;
+  color: #505050;
   font-weight: bold;
   font-size: 1.5em;
 }
@@ -700,8 +697,9 @@ footer .mini-copyright {
 }
 
 .single .chapter .pic .slogan {
-  color: #4d4f51;
-  font-size: 1em;
+  text-align: center;
+  color: #505050;
+  font-size: 1.5em;
 }
 
 .single .chapter .pic.banner img {
@@ -709,8 +707,20 @@ footer .mini-copyright {
   object-fit: cover;
 }
 
+.single .chapter .pic.banner .date {
+  color: #505050;
+  font-size: 1.2em;
+  font-style: italic;
+}
+
 .single .chapter .pic.typeA {
   width: 70%;
+}
+
+@media (max-width: 576px) {
+  .single .chapter .pic.typeA {
+    width: 100%;
+  }
 }
 
 .single .chapter .pic img {
@@ -730,4 +740,24 @@ footer .mini-copyright {
 
 .single .chapter .pic UL.tags li:nth-child(n+2) {
   margin-left: 5px;
+}
+
+.single .chapter .text {
+  width: 80%;
+  margin: auto;
+}
+
+@media (max-width: 576px) {
+  .single .chapter .text {
+    width: 100%;
+  }
+}
+
+.swiper-container {
+  width: 95%;
+  max-height: 800px;
+}
+
+.swiper-slide-active {
+  z-index: 999;
 }
