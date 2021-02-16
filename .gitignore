@@ -1,3 +1,4 @@
 # Node.js 
+.DS_Store
 .ntvs_analysis.dat
 node_modules/
