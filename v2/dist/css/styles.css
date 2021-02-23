@@ -674,6 +674,12 @@ footer .mini-copyright {
   background-color: #d7c928;
 }
 
+.single .slogan {
+  text-align: center;
+  color: #505050;
+  font-size: 1.5em;
+}
+
 .single .chapter {
   width: 100%;
 }
@@ -696,12 +702,6 @@ footer .mini-copyright {
   margin: 5px auto;
 }
 
-.single .chapter .pic .slogan {
-  text-align: center;
-  color: #505050;
-  font-size: 1.5em;
-}
-
 .single .chapter .pic.banner img {
   height: 400px;
   object-fit: cover;
@@ -719,6 +719,16 @@ footer .mini-copyright {
 
 @media (max-width: 576px) {
   .single .chapter .pic.typeA {
+    width: 100%;
+  }
+}
+
+.single .chapter .pic.typeB {
+  width: 50%;
+}
+
+@media (max-width: 576px) {
+  .single .chapter .pic.typeB {
     width: 100%;
   }
 }

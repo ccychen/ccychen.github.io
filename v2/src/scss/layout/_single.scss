@@ -1,4 +1,9 @@
 .single{
+    & .slogan{
+        text-align: center;
+        color: $gray-dark;
+        font-size: 1.5em;
+    }    
     & .chapter{
         &:first-child{
             margin-top: 10px;
@@ -15,11 +20,6 @@
         }
         & .pic{
             margin: 5px auto;
-            & .slogan{
-                text-align: center;
-                color: $gray-dark;
-                font-size: 1.5em;
-            }
             &.banner{
                 img{
                     height: 400px;
@@ -36,6 +36,12 @@
                     width:100%;
                 }    
                 width: 70%;
+            }
+            &.typeB{
+                @media (max-width: $screen-sm) {
+                    width:100%;
+                }    
+                width: 50%;
             }
             & img{
                 width: 100%;                
