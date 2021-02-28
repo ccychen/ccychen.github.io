@@ -9,7 +9,7 @@ module.exports =  function (grunt) {
 
     // Define reusable paths.
     paths: {
-      dist: '../',
+      dist: 'dist',
       src: 'src',
       dist_css: '<%= paths.dist %>/css',
       dist_js: '<%= paths.dist %>/js',
