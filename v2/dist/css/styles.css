@@ -772,3 +772,22 @@ footer .mini-copyright {
 .swiper-slide-active {
   z-index: 999;
 }
+
+.gallery {
+  width: 70%;
+  margin: auto;
+}
+
+@media (max-width: 576px) {
+  .gallery {
+    width: 99%;
+  }
+}
+
+.gallery .title {
+  text-align: center;
+  color: #505050;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+  text-transform: capitalize;
+}

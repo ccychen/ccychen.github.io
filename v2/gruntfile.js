@@ -120,7 +120,8 @@ module.exports =  function (grunt) {
     uglify: {
       main_js: {
         files: {
-          '<%= paths.dist_js %>/main.min.js': '<%= paths.src_js %>/main.js'
+          '<%= paths.dist_js %>/main.min.js': '<%= paths.src_js %>/main.js',
+          '<%= paths.dist_js %>/gallery.min.js': '<%= paths.src_js %>/gallery.js'
         }
       }
     },

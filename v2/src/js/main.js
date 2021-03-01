@@ -4,12 +4,10 @@ function changeLanguage(lang) {
 }
 
 $(function () {
-    $(document).ready(function() {
-        $("img").on("contextmenu",function(){
-           return false;
-        }); 
-    }); 
-    
+    $("img").on("contextmenu", function () {
+        return false;
+    });
+
     $(".mobile-nav-toggle").click(function () {
         if ($("#mobile-nav").hasClass("active")) {
             $("#mobile-nav").removeClass("active");
@@ -53,26 +51,4 @@ $(function () {
     });
 
     changeLanguage("en");
-
-    swiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        loop: false
-      
-        // // If we need pagination
-        // pagination: {
-        //   el: '.swiper-pagination',
-        // },
-      
-        // // Navigation arrows
-        // navigation: {
-        //   nextEl: '.swiper-button-next',
-        //   prevEl: '.swiper-button-prev',
-        // },
-      
-        // // And if we need scrollbar
-        // scrollbar: {
-        //   el: '.swiper-scrollbar',
-        // },
-    });
-    
 });

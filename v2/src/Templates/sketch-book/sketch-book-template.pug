@@ -1,0 +1,14 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+    - var pageTitle = 'Sketch Book - 页面 - CCY CHEN'
+    - var pageCate = 'sketchbook'
+    - var isSketchbook = true
+    - var root = "../"
+
+//- Page Content
+block content
+    div.gallery
+        div.title ink & pencil
+        div.album.container-fluid

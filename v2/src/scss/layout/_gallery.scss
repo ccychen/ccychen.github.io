@@ -1,0 +1,15 @@
+.gallery{
+    @media (max-width: $screen-sm) {
+        width:99%;
+    }    
+    width: 70%;
+    margin: auto;
+
+    & .title{
+        text-align: center;
+        color: $gray-dark;
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        text-transform: capitalize;
+    }
+}
