@@ -196,6 +196,7 @@ header {
   font-weight: normal;
   padding: 0.2em;
   margin-right: 0em;
+  cursor: pointer;
 }
 
 .header-nav .nav-link.langSelector.selected {
