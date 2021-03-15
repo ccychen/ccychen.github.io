@@ -9,9 +9,9 @@
         });
     });
 
-    // $(window).resize(function () {
-    //     _gallery.Resize($(".album").width());
-    // });
+    $(window).resize(function () {
+        _gallery.Resize($(".album").width());
+    });
 });
 
 
