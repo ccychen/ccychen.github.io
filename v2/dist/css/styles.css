@@ -789,13 +789,13 @@ footer .mini-copyright {
 }
 
 .gallery {
-  width: 70%;
+  width: 80%;
   margin: auto;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 991px) {
   .gallery {
-    width: 99%;
+    width: 100%;
   }
 }
 
@@ -805,4 +805,19 @@ footer .mini-copyright {
   font-size: 1.5em;
   margin-bottom: 1em;
   text-transform: capitalize;
+}
+
+.gallery .container-fluid .row {
+  margin-left: 0px;
+  margin-top: 15px;
+}
+
+.gallery .container-fluid .row a:nth-child(n+2) {
+  margin-left: 15px;
+}
+
+.gallery .album {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-width: 300px;
 }

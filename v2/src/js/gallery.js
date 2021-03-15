@@ -1,20 +1,17 @@
-﻿$(function(){
-    console.log("gallery")
-    var _album;
+﻿$(function () {
+    var _a_gallerylbum;
     var _pager;
 
     $(document).ready(function () {
-        _album = new Album($(".album"), FILE_LIST, {
+        _gallery = new Gallery($(".album"), FILE_LIST, {
             "width": $(".album").width(),
-            "target_row_height": 360,
-            "max_row_height": 360,
-            "img_path":"portifilo/"
+            "img_path": "../portfolio/"
         });
     });
 
-    $(window).resize(function () {
-        _album.Resize($(".album").width());
-    });
+    // $(window).resize(function () {
+    //     _gallery.Resize($(".album").width());
+    // });
 });
 
 
@@ -24,16 +21,23 @@ function Gallery(album, images, config) {
     var _images = images;
     var _rows = [];
     var _config = {
-        "width":900,
+        "width": 900,
         "target_row_height": 240,
         "max_row_height": 240,
-        "margin": 20,	//for calculation, also define in css
-        "img_path":""
+        "margin": 15,	//for calculation, also define in css
+        "img_path": ""
     }
 
     for (key in config) {
         _config[key] = config[key];
     }
+
+    _config["width"] = _config["width"];
+    _config["target_row_height"] = _config["width"] * 0.6;
+    if (_config["target_row_height"] > 240) { _config["target_row_height"] = 240; }
+
+    _config["max_row_height"] = _config["width"];
+    if (_config["max_row_height"] > 300) { _config["max_row_height"] = 300; }
 
     Init();
 
@@ -49,8 +53,8 @@ function Gallery(album, images, config) {
 
         this.Add = function (fileName, oriWidth, oriHeight) {
             var scaledWidth = Math.ceil(oriWidth / (oriHeight / _tarHeight));
-            if ((_width + scaledWidth + _margin * (_numImgs + 1) < _tarWidth) //the image is narrow than space
-				|| (_tarWidth - _width - _margin * (_numImgs + 1) > (scaledWidth + _margin) / 2)) { //space > image width / 2
+            if ((_width + scaledWidth + _margin * (_numImgs + 0) < _tarWidth) //the image is narrow than space
+                || (_tarWidth - _width - _margin * (_numImgs + 0) > (scaledWidth + _margin) / 2)) { //space > image width / 2
                 //append
                 _images.push([fileName, oriWidth, oriHeight]);
                 _numImgs++;
@@ -67,7 +71,7 @@ function Gallery(album, images, config) {
         };
 
         this.height = function () {
-            var ratio = (_tarWidth - _margin * (_numImgs + 1)) / _width;
+            var ratio = (_tarWidth - _margin * (_numImgs - 1)) / _width;
             if (ratio > 1 && _isLastRow) {
                 return _tarHeight;
             }
@@ -91,12 +95,12 @@ function Gallery(album, images, config) {
 
         //clear rows
         _$album.empty();
-        for (var i = startIdx ; i < endIdx; i++) {
+        for (var i = startIdx; i < endIdx; i++) {
             var r = _rows[i];
 
             var $row = $("<div/>");
             $row.height(r.height()).addClass("row");
-            for (var j = 0; j < r.numbrOfImage() ; j++) {
+            for (var j = 0; j < r.numbrOfImage(); j++) {
                 var $link = $("<A target='blank'/>").attr("href", _config["img_path"] + r.getImage(j)[0]);
                 var $img = $("<img/>").attr("src", _config["img_path"] + r.getImage(j)[0]);
                 $img.attr("height", r.height());
