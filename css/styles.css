@@ -822,6 +822,10 @@ footer .mini-copyright {
   min-width: 300px;
 }
 
+.homepage {
+  text-align: center;
+}
+
 .homepage img {
   max-width: 100%;
 }
