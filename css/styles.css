@@ -821,3 +821,7 @@ footer .mini-copyright {
   margin-bottom: 10px;
   min-width: 300px;
 }
+
+.homepage img {
+  max-width: 100%;
+}
