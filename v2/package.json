@@ -9,7 +9,7 @@
   "author": "ccychen.com",
   "homepage": "ccychen.com",
   "devDependencies": {
-    "node-sass": "^4.14.0",
+    "node-sass": "^7.0.0",
     "grunt": "^1.1.0",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-browser-sync": "^2.2.0",
