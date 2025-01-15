@@ -45,9 +45,9 @@ header{
                 background-color: $cate-sketchbook;
             }
         }
-        &.paintings{
+        &.art{
             &.active, &:hover{
-                background-color: $cate-paintings;
+                background-color: $cate-art;
             }
         }
         &.about{

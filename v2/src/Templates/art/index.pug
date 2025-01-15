@@ -1,0 +1,15 @@
+extends ../partials/layout
+
+//- Override default config variables
+append config
+    - var pageTitle = 'Art - CCY CHEN'
+    - var pageCate = 'art'
+    - var root = "../"
+    - var cateRoot = "../"
+//- Page Content
+block content
+    div.container.drawingList
+        div.row.items
+            +drawing-item("little stuff", "/01littlestuff/cover/littlestuffcoverpink.jpg","littlestuff")
+            +drawing-item("Pleindevie", "/02Pleindevie/pdvcover.jpg","Pleindevie.html")
+            +drawing-item("Runïstar 2021", "/03Runïstar2021/runicover.jpg","Runistar2021.html")

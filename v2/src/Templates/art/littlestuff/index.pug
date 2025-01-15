@@ -1,0 +1,24 @@
+extends ../../partials/layout
+
+//- Override default config variables
+append config
+    - var pageTitle = 'Art - Little Stuff - CCY CHEN'
+    - var pageCate = 'art'
+    - var root = "../../"
+    - var cateRoot = "../"
+//- Page Content
+block content
+    div.container.drawingList
+        div.caption.row
+            div.col-4
+            span.col-4
+                | Art - Little Stuff
+            div.col-4
+        div.row.items
+            +drawing-item-2("Pink", "text","2002","/01littlestuff/cover/littlestuffcoverpink.jpg","pink.html")
+            +drawing-item-2("Light Blue", "text","2002","/01littlestuff/cover/littlestuffcoverlightblue.jpg","lightblue.html")
+            +drawing-item-2("X Green", "text","2002","/01littlestuff/cover/littlestuffcoverxgreen.jpg","Xgreen.html")
+            +drawing-item-2("T Yellow", "text","2002","/01littlestuff/cover/littlestuffcovertyellow.jpg","Tyellow.html")
+            +drawing-item-2("Black", "text","2002","/01littlestuff/cover/littlestuffcoverblack.jpg","black.html")
+            +drawing-item-2("Gray", "text","2002","/01littlestuff/cover/littlestuffcovergray.jpg","gray.html")
+            +drawing-item-2("Dark Blue", "text","2002","/01littlestuff/cover/littlestuffcoverdarkblue.jpg","darkblue.html")

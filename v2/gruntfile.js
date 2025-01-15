@@ -1,7 +1,7 @@
 
 module.exports =  function (grunt) {
 
-  const sass = require('node-sass');
+  const sass = require('sass');
   
   // Project configuration.
   grunt.initConfig({
@@ -68,7 +68,7 @@ module.exports =  function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= paths.src_pug %>',
-          src: ['*.pug',  'serial/*.pug', 'sketch-book/*.pug', 'paintings/*.pug'],
+          src: ['*.pug', 'sketch-book/*.pug', 'art/*.pug','art/*/*.pug'],
           dest: '<%= paths.dist %>',
           ext: '.html'
         }]
@@ -83,7 +83,7 @@ module.exports =  function (grunt) {
         },
         files: [{
           cwd: '<%= paths.src_pug %>',
-          src: ['*.pug', 'serial/*.pug', 'sketch-book/*.pug', 'paintings/*.pug'],
+          src: ['*.pug', 'sketch-book/*.pug', 'art/*.pug','art/*/*.pug'],
           dest: '<%= paths.dist %>',
           expand: true,
           ext: '.html'

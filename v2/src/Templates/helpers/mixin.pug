@@ -19,3 +19,15 @@ mixin drawing-item(caption, imgUrl, url)
             img(src=imgUrl)
             span
                 | #{caption}
+
+mixin drawing-item-2(caption,  remarkLeft, remarkRight, imgUrl, url)
+    div.drawingItem.col-sm-12.col-md-6.col-lg-4
+        a(href=url)
+            img(src=imgUrl)
+            span.caption
+                | #{caption}
+            div.remark
+                span.remark-left
+                    | #{remarkLeft}
+                span.remark-right
+                    | #{remarkRight}

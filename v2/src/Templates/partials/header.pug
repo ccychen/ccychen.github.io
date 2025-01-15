@@ -18,16 +18,10 @@ header
     else
       a.nav-link.sketchbook(href=root + 'sketch-book').active Sketch Book
 
-    if pageCate != "serial"
-      a.nav-link.serial(href=root + 'serial') Serial
+    if pageCate != "art"
+      a.nav-link.art(href=root + 'art') Art
     else
-      a.nav-link.serial(href=root + 'serial').active Serial
-
-
-    if pageCate != "paintings"
-      a.nav-link.paintings(href=root + 'paintings') Paintings
-    else
-      a.nav-link.paintings(href=root + 'paintings').active Paintings
+      a.nav-link.art(href=root + 'art').active Art
 
 
     if pageCate != "about"

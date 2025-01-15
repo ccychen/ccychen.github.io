@@ -6,7 +6,7 @@
     }
     .caption{
         margin: 0;
-        display: none;
+        //display: none;
         &.show{
             display: flex!important;
         }
@@ -48,8 +48,9 @@
             line-height: 1.6em;
             vertical-align: middle;
             text-align: center;
-            font-weight: bold;
-            color: white;
+            color: $gray-dark;
+            font-size: 1.5em;
+            margin-bottom: 1em;
             text-transform: capitalize;
         }
     }
@@ -73,6 +74,7 @@
                 padding: 0;
                 display: inline-block;
                 text-transform: capitalize;
+                text-decoration: none; 
 
                 IMG{
                     width: 100%;
@@ -85,12 +87,23 @@
                     display: inline-block;
                     color: $body-color;
                     font-weight:normal;
-                    padding: 0.5em 0;
                     font-size: 1em;
                     font-weight: 600;
                     width: 100%;
                     @media (max-width: $screen-md) {
                         font-size: .8em;
+                    }
+                }
+                SPAN.caption{
+                    padding: 0.5em 0;
+                }
+              
+                DIV.remark{
+                    display:flex;
+                    justify-content: space-between;
+                    
+                    SPAN.remark-right{
+                        text-align: right;
                     }
                 }
             }

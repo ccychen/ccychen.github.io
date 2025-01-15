@@ -5,7 +5,7 @@
     $(document).ready(function () {
         _gallery = new Gallery($(".album"), FILE_LIST, {
             "width": $(".album").width(),
-            "img_path": "../portfolio/"
+            "img_path": "/portfolio/"
         });
     });
 

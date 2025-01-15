@@ -9,7 +9,6 @@
   "author": "ccychen.com",
   "homepage": "ccychen.com",
   "devDependencies": {
-    "node-sass": "^4.14.0",
     "grunt": "^1.1.0",
     "grunt-autoprefixer": "^3.0.4",
     "grunt-browser-sync": "^2.2.0",
@@ -20,7 +19,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-sass": "^3.1.0",
     "pug": "^3.0.0  ",
-    "pug-inheritance": "^3.0.0-beta.2"
-  },
-  "dependencies": {}
+    "pug-inheritance": "^3.0.0-beta.2",
+    "sass": "^1.83.3"
+  }
 }

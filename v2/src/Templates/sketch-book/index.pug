@@ -5,6 +5,7 @@ append config
     - var pageTitle = 'Sketch Book - CCY CHEN'
     - var pageCate = 'sketchbook'
     - var root = "../"
+    - var cateRoot = "/sketch-book/"
 
 //- Page Content
 block content
@@ -17,10 +18,10 @@ block content
             div.col-4
                 hr
         div.row.items
-            +folder-item("Ink & Pencil",root + "img/cover/sketchbook/ink.png","ink.html")
-            +folder-item("Little Protraits",root + "img/cover/sketchbook/LITTLE_protraits.png","little-protraits.html")
-            +folder-item("Salon Des Vin",root + "img/cover/sketchbook/Salon_des_vin.jpg","salon-des-vin.html")
-            +folder-item("Sketch CG",root + "img/cover/sketchbook/Sketch_CG.png","sketch-cg.html")
-            +folder-item("sai",root + "img/cover/sketchbook/sketchbook_SAI.png","sketch-sai.html")
-            +folder-item("small color piece",root + "img/cover/sketchbook/smallcolorpiece.png","small-color-piece.html")
-            +folder-item("travel in France",root + "img/cover/sketchbook/travel_in_France.png","travel-in-france.html")
+            +folder-item("Ink & Pencil", cateRoot + "covers/ink.png","ink-and-pencil.html")
+            +folder-item("Little Protraits", cateRoot + "covers/little-protraits2.png","little-protraits.html")
+            +folder-item("Ipad portairts", cateRoot + "covers/ipad-protraits.png", "ipad-protraits.html")
+            +folder-item("CGsketch", cateRoot + "covers/sketch-cg.png", "sketch-cg.html")
+            +folder-item("sai", cateRoot + "covers/sketchbook_SAI.png","sai.html")
+            +folder-item("little color piece", cateRoot + "covers/smallcolorpiece.png", "little-color-piece.html")
+            +folder-item("travel in France", cateRoot + "covers/travel_in_France.png", "travel-in-france.html")
